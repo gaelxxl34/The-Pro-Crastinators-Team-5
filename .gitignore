@@ -85,4 +85,34 @@ crashlytics-build.properties
 *_bak*.hip
 *_bak*.hipnc
 
+# ---- OS Generated Files ---- #
+
+# macOS
 *.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ---- IDE Extras ---- #
+.idea/
+*.sln.iml
+*.slnx
+*.approj
+
+# ---- Compressed Archives ---- #
+*.7z
+*.gz
+*.rar
+*.tar
+*.zip
