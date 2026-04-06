@@ -29,3 +29,26 @@ Only these matter:
 - `Assets/` — your scripts, scenes, prefabs, etc.
 - `ProjectSettings/` — shared project settings
 - `Packages/manifest.json` and `Packages/packages-lock.json`
+
+---
+
+## Task Assignments
+
+### Kevin — Keyboard Data Analytics Feature
+- Implement a keyboard data analytics system that tracks and displays typing statistics
+- Collect metrics such as keys pressed, typing speed (WPM), accuracy, and key frequency
+- Provide a summary/dashboard of the analytics data to the user
+
+### Rut — Time Management Tool
+- Build a creative time management tool that lets the user set a session timer
+- User can input the time in **seconds** or **minutes**
+- While the timer is running, the writer can type normally
+- When the set time expires:
+  - **Block writing** — disable the ability for the writer to continue typing
+  - **Show a countdown** to exit the game
+- The experience should feel fast-paced and engaging
+
+### Gael — Advanced Teleportation & Menus
+- Implement advanced teleportation mechanics for navigating the VR environment
+- Design and build in-game menus (main menu, pause menu, settings, etc.)
+- Ensure smooth UX transitions between teleportation and menu interactions
