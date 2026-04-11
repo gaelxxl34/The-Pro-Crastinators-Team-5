@@ -39,6 +39,7 @@
 *.csproj
 *.unityproj
 *.sln
+*.slnx
 *.suo
 *.tmp
 *.user
@@ -116,3 +117,7 @@ $RECYCLE.BIN/
 *.rar
 *.tar
 *.zip
+
+
+# needs to be manually installed due to size :(((
+Assets/StreamingAssets/nlp_env/
