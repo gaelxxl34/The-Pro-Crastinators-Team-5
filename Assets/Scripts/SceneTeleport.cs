@@ -3,13 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneTeleport : MonoBehaviour
 {
-    public string sceneName = "ProCrastinator";
-
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !string.IsNullOrEmpty(TeleportMenuController.ChosenScene))
         {
-            SceneManager.LoadScene(sceneName);
+            TeleportMenuController.TeleportNow();
         }
     }
 }

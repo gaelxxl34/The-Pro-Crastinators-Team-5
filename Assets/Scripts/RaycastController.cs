@@ -36,41 +36,35 @@ public class RaycastController : MonoBehaviour
 
     void Start()
     {
-        // Commented out - using reticle instead of laser line
-        // lineRenderer.useWorldSpace = true;
-        // lineRenderer.startWidth = 0.02f;
-        // lineRenderer.endWidth = 0.02f;
-        // lineRenderer.positionCount = 2;
+        if (objectMenuCanvas != null) objectMenuCanvas.gameObject.SetActive(false);
+        if (player != null) characterMovement = player.GetComponent<CharacterMovement>();
 
-        // Material lineMat = new Material(Shader.Find("Sprites/Default"));
-        // lineMat.color = Color.white;
-        // lineRenderer.material = lineMat;
-
-        objectMenuCanvas.gameObject.SetActive(false);
-        characterMovement = player.GetComponent<CharacterMovement>();
-
-        AddColliderToButton(destroyButton);
-        AddColliderToButton(storeButton);
-        AddColliderToButton(exitButton);
+        if (destroyButton != null) AddColliderToButton(destroyButton);
+        if (storeButton != null) AddColliderToButton(storeButton);
+        if (exitButton != null) AddColliderToButton(exitButton);
 
         // Force-enable the reticle dot (it's inside VRGroup which may start inactive)
-        XRCardboardReticle reticle = cam.GetComponentInChildren<XRCardboardReticle>(true);
-        if (reticle != null)
+        if (cam != null)
         {
-            // Activate the VRGroup parent so the reticle becomes visible
-            reticle.transform.parent.gameObject.SetActive(true);
+            XRCardboardReticle reticle = cam.GetComponentInChildren<XRCardboardReticle>(true);
+            if (reticle != null && reticle.transform.parent != null)
+                reticle.transform.parent.gameObject.SetActive(true);
         }
     }
 
     void AddColliderToButton(Button btn)
     {
+        if (btn == null) return;
         BoxCollider col = btn.GetComponent<BoxCollider>();
         if (col == null)
             col = btn.gameObject.AddComponent<BoxCollider>();
 
         RectTransform rt = btn.GetComponent<RectTransform>();
-        col.size = new Vector3(rt.rect.width, rt.rect.height, 1f);
-        col.center = Vector3.zero;
+        if (rt != null)
+        {
+            col.size = new Vector3(rt.rect.width, rt.rect.height, 1f);
+            col.center = Vector3.zero;
+        }
     }
 
     void Update()
@@ -249,9 +243,18 @@ public class RaycastController : MonoBehaviour
             if (lever == null)
                 lever = hit.collider.GetComponentInParent<LeverController>();
 
+            // Check for mannequin display toggle
+            MannequinDisplayController mannequin = hit.collider.GetComponent<MannequinDisplayController>();
+            if (mannequin == null)
+                mannequin = hit.collider.GetComponentInParent<MannequinDisplayController>();
+
             if (lever != null)
             {
                 lever.Activate();
+            }
+            else if (mannequin != null)
+            {
+                mannequin.Toggle();
             }
             else if (hit.collider.CompareTag("Interactable"))
             {
@@ -380,7 +383,7 @@ public class RaycastController : MonoBehaviour
 
     void HandleHighlight(RaycastHit hit)
     {
-        HighlightObject highlightObj = hit.collider.GetComponent<HighlightObject>();
+        HighlightObject highlightObj = hit.collider.GetComponentInParent<HighlightObject>();
 
         if (highlightObj != null)
         {

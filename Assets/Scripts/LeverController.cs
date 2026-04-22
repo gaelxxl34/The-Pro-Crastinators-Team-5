@@ -3,7 +3,9 @@ using System.Collections;
 
 public class LeverController : MonoBehaviour
 {
-    public GameObject teleportObject; // Assign the teleport object in Inspector
+    [Tooltip("Assign the TeleportMenuController from the scene")]
+    public TeleportMenuController teleportMenu;
+
     private Animator animator;
     private bool activated = false;
 
@@ -11,10 +13,6 @@ public class LeverController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         animator.speed = 0;
-
-        // Hide the teleport object until the lever is pulled
-        if (teleportObject != null)
-            teleportObject.SetActive(false);
     }
 
     public void Activate()
@@ -32,15 +30,19 @@ public class LeverController : MonoBehaviour
         yield return null;
         yield return null;
 
-        // Wait until the clip finishes (normalizedTime reaches 1.0)
-        while (animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f)
+        // Wait until the clip finishes (normalizedTime reaches 1.0), with 5s timeout
+        float elapsed = 0f;
+        while (animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f && elapsed < 5f)
+        {
+            elapsed += Time.deltaTime;
             yield return null;
+        }
 
         // Freeze on the last frame
         animator.speed = 0;
 
-        // Show the teleport object
-        if (teleportObject != null)
-            teleportObject.SetActive(true);
+        // Open the destination selection menu
+        if (teleportMenu != null)
+            teleportMenu.OpenMenu();
     }
 }
