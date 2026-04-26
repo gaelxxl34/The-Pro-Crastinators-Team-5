@@ -117,3 +117,11 @@ $RECYCLE.BIN/
 *.rar
 *.tar
 *.zip
+
+
+# needs to be manually installed due to size :(((
+Assets/StreamingAssets/nlp_env/
+Assets/StreamingAssets/nlp_env.meta
+
+# Local build tempdir
+.utmp/

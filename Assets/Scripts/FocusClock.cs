@@ -243,8 +243,11 @@ public class FocusClockPrefab : MonoBehaviour
         // Only do hit-testing if gaze is on the canvas
         if (!_gazeHitsCanvas || EventSystem.current == null) return;
 
-        // Check for controller click (Button 2) or screen tap
+        // Check for controller click (Button 2) or screen tap or B button
         bool clicked = Input.GetKeyDown(clickButton)
+                    || Input.GetKeyDown(KeyCode.B)
+                    || Input.GetKeyDown(KeyCode.K)
+                    || Input.GetKeyDown(KeyCode.JoystickButton5)
                     || Input.GetMouseButtonDown(0);
 
         if (!clicked) return;

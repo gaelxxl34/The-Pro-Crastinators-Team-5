@@ -4,7 +4,16 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ProCrastinator Main Office.unity
+    guid: f05267729c2104dc4a1400e3f11ac6f7
+  - enabled: 1
+    path: Assets/Scenes/ProCrastinator Beach.unity
+    guid: 292de32bc875f478d847da20b08842c2
+  - enabled: 1
+    path: Assets/Scenes/ProCrastinator Forest.unity
+    guid: f5f093e382fad48b391d70904c41e8c5
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 874d5862f7c7a4901bc19e3acac91f57, type: 2}
