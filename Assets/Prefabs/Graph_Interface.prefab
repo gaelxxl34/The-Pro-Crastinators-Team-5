@@ -5433,7 +5433,8 @@ GameObject:
   - component: {fileID: 8834286633153279941}
   - component: {fileID: 7842640344591046408}
   - component: {fileID: 6293408075442361212}
-  - component: {fileID: 6627890697121230223}
+  - component: {fileID: 6335415802490720910}
+  - component: {fileID: 2040428364543855249}
   m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
@@ -5500,7 +5501,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6627890697121230223
+--- !u!114 &6335415802490720910
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5509,12 +5510,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 4502168108649406669}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec33db62b785e2647a5410ebc38c6ff8, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b35e81c4b0f62744844f0ff659a5418, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
-  scrollContent: {fileID: 293446790936008505}
+  m_EditorClassIdentifier: Assembly-CSharp::NERProcessor
   entryPrefab: {fileID: 5146793306842543876, guid: 97a4910b25925fe4f8ec83c030b9758f, type: 3}
-  serverStartTimeout: 10
+  content: {fileID: 293446790936008505}
+  documentFileName: Gatsby.txt
+--- !u!114 &2040428364543855249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4502168108649406669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848d007cf429f7647a6e13973a0980d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterLineChart
+  nerProcessor: {fileID: 6335415802490720910}
+  chart: {fileID: 5639427860482233790}
+  maxCharactersToShow: 10
 --- !u!1 &4714418102828865684
 GameObject:
   m_ObjectHideFlags: 0

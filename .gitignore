@@ -120,4 +120,4 @@ $RECYCLE.BIN/
 
 
 # needs to be manually installed due to size :(((
-Assets/StreamingAssets/nlp_env/
+Assets/StreamingAssets/ner_model_17.sentis
