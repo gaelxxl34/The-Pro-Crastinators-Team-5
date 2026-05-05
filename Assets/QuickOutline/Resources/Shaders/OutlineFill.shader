@@ -23,7 +23,7 @@ Shader "Custom/Outline Fill" {
 
     Pass {
       Name "Fill"
-      Cull Off
+      Cull Front
       ZTest [_ZTest]
       ZWrite Off
       Blend SrcAlpha OneMinusSrcAlpha

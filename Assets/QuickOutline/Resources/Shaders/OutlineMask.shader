@@ -19,7 +19,7 @@ Shader "Custom/Outline Mask" {
 
     Pass {
       Name "Mask"
-      Cull Off
+      Cull Front
       ZTest [_ZTest]
       ZWrite Off
       ColorMask 0
