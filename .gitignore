@@ -123,5 +123,9 @@ $RECYCLE.BIN/
 Assets/StreamingAssets/nlp_env/
 Assets/StreamingAssets/nlp_env.meta
 
+# OpenAI API key — never commit
+Assets/StreamingAssets/openai_key.txt
+Assets/StreamingAssets/openai_key.txt.meta
+
 # Local build tempdir
 .utmp/

@@ -238,7 +238,12 @@ public class RaycastController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.JoystickButton5))
         {
-            // Check for lever activation first
+            // Check for chatbot trigger first (assistant's table)
+            ChatbotTrigger chatbot = hit.collider.GetComponent<ChatbotTrigger>();
+            if (chatbot == null)
+                chatbot = hit.collider.GetComponentInParent<ChatbotTrigger>();
+
+            // Check for lever activation
             LeverController lever = hit.collider.GetComponent<LeverController>();
             if (lever == null)
                 lever = hit.collider.GetComponentInParent<LeverController>();
@@ -248,7 +253,11 @@ public class RaycastController : MonoBehaviour
             if (mannequin == null)
                 mannequin = hit.collider.GetComponentInParent<MannequinDisplayController>();
 
-            if (lever != null)
+            if (chatbot != null)
+            {
+                chatbot.Activate();
+            }
+            else if (lever != null)
             {
                 lever.Activate();
             }
