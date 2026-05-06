@@ -247,7 +247,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_m592DB0105CA0BC97AA1
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 96900
+// Method Definition Index: 96941
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_tCE23A3FF5262C11865297F89978130E2A4B02E4D UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m172E28751B30462C42AA5F5199134232665D0953 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -281,7 +281,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_tCE23A3FF5262C11865297F8997813
 		return L_6;
 	}
 }
-// Method Definition Index: 96901
+// Method Definition Index: 96942
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m9249D8410541123446E3A05D211E7902B55E97E8 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t711A21E8D2AFB26F3C55930166AD78E836FA9B65* __this, const RuntimeMethod* method) 
 {
 	{
@@ -367,7 +367,7 @@ IL2CPP_EXTERN_C void MonoScriptData_tCE23A3FF5262C11865297F89978130E2A4B02E4D_ma
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 96902
+// Method Definition Index: 96943
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationSampleDependency_Update_mB098234076E0278AAA98A6D67F4B8524D1979A8E (AnimationSampleDependency_t203A0E5B67FE38BE29AA119164B55D41EC5EFA7B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -406,7 +406,7 @@ IL_0024:
 		return;
 	}
 }
-// Method Definition Index: 96903
+// Method Definition Index: 96944
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AnimationSampleDependency_HasDependencyInstalled_m2D974E47F11F6D7AFB25D6C9C36180D56519D574 (AnimationSampleDependency_t203A0E5B67FE38BE29AA119164B55D41EC5EFA7B* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -449,7 +449,7 @@ IL_0015:
 		return (bool)1;
 	}
 }
-// Method Definition Index: 96904
+// Method Definition Index: 96945
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationSampleDependency__ctor_mDD141A5D22EE5DAAC408D0595A77794A99EBC3B6 (AnimationSampleDependency_t203A0E5B67FE38BE29AA119164B55D41EC5EFA7B* __this, const RuntimeMethod* method) 
 {
 	{

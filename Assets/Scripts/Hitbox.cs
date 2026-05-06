@@ -4,7 +4,7 @@ public class Hitbox : MonoBehaviour
 {
     public Outline outline;
 
-    void Awake()
+    void start()
     {
         if (outline == null)
             outline = gameObject.AddComponent<Outline>();

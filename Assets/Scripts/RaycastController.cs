@@ -222,21 +222,8 @@ public class RaycastController : MonoBehaviour
 
     void HandleActions(RaycastHit hit)
     {
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.L))
-        {
-            if (hit.collider.CompareTag("Floor"))
-            {
-                Vector3 pos = hit.point;
-                pos.y = player.transform.position.y;
 
-                CharacterController cc = player.GetComponent<CharacterController>();
-                cc.enabled = false;
-                player.transform.position = pos;
-                cc.enabled = true;
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.JoystickButton5))
+        if (Input.GetKeyDown(KeyCode.JoystickButton0))
         {
             // Check for chatbot trigger first (assistant's table)
             ChatbotTrigger chatbot = hit.collider.GetComponent<ChatbotTrigger>();
@@ -249,9 +236,9 @@ public class RaycastController : MonoBehaviour
                 lever = hit.collider.GetComponentInParent<LeverController>();
 
             // Check for mannequin display toggle
-            MannequinDisplayController mannequin = hit.collider.GetComponent<MannequinDisplayController>();
+            GraphUserInterface mannequin = hit.collider.GetComponent<GraphUserInterface>();
             if (mannequin == null)
-                mannequin = hit.collider.GetComponentInParent<MannequinDisplayController>();
+                mannequin = hit.collider.GetComponentInParent<GraphUserInterface>();
 
             if (chatbot != null)
             {
@@ -263,23 +250,11 @@ public class RaycastController : MonoBehaviour
             }
             else if (mannequin != null)
             {
-                mannequin.Toggle();
+                mannequin.Activate();
             }
             else if (hit.collider.CompareTag("Interactable"))
             {
                 OpenObjectMenu(hit.collider.gameObject);
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Y))
-        {
-            if (settingsMenuController != null && settingsMenuController.IsGrabbing) return;
-
-            if (hit.collider.CompareTag("Floor") && lastDestroyedObject != null)
-            {
-                lastDestroyedObject.transform.position = hit.point + Vector3.up * 0.5f;
-                lastDestroyedObject.SetActive(true);
-                lastDestroyedObject = null;
             }
         }
     }

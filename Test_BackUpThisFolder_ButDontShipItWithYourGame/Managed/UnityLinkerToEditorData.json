@@ -464,7 +464,11 @@
           },
           {
             "name": "SkinnedMeshRenderer",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/ProCrastinator Beach.unity",
+              "Assets/Scenes/ProCrastinator Forest.unity",
+              "Assets/Scenes/ProCrastinator Main Office.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -993,8 +997,6 @@
           {
             "name": "CapsuleCollider",
             "scenes": [
-              "Assets/Scenes/ProCrastinator Beach.unity",
-              "Assets/Scenes/ProCrastinator Forest.unity",
               "Assets/Scenes/ProCrastinator Main Office.unity"
             ],
             "dependencyType": 0,

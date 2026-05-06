@@ -702,6 +702,8 @@ UnityEngine.Light::get_spotAngle_Injected
 UnityEngine.Light::get_bakingOutput_Injected
 UnityEngine.Light::get_color_Injected
 UnityEngine.Light::get_cookieSize2D_Injected
+UnityEngine.Light::set_color_Injected
+UnityEngine.Light::set_intensity_Injected
 UnityEngine.Light::get_shadows_Injected
 UnityEngine.Light::get_type_Injected
 UnityEngine.LowLevelPhysics2D.PhysicsLowLevelScripting2D::PhysicsAABB_IsValid_Injected
