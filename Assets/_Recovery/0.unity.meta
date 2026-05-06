@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/_Recovery/0.unity.meta
 guid: 2a9edb60710681b4f826ec1bd4ca072e
+========
+guid: bb7dfa924419649dea1726b93a5a5bfc
+folderAsset: yes
+>>>>>>>> main:Assets/Prefab/office-worker-6-animated/source.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

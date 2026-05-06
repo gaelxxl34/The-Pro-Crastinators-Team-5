@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/_Recovery.meta
 guid: 7acddd0fa2a2ef14c9421060e8529022
+========
+guid: 495f93cb65654439bb43bab7effb7a5d
+>>>>>>>> main:Assets/Prefab/office-worker-6-animated/textures.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
