@@ -132,6 +132,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2601944016721207272, guid: a1e0ea410b77d484db18a264d1e6a66e, type: 3}
+      propertyPath: sunLight
+      value: 
+      objectReference: {fileID: 979735790}
     - target: {fileID: 4718919535673683457, guid: a1e0ea410b77d484db18a264d1e6a66e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.36279
@@ -193,6 +197,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1e0ea410b77d484db18a264d1e6a66e, type: 3}
+--- !u!1001 &181048152
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8560509200224341923, guid: 5b780f90f086343789da2fe52adddbf0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560509200224341923, guid: 5b780f90f086343789da2fe52adddbf0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.1199998
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560509200224341923, guid: 5b780f90f086343789da2fe52adddbf0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560509200224341923, guid: 5b780f90f086343789da2fe52adddbf0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560509200224341923, guid: 5b780f90f086343789da2fe52adddbf0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560509200224341923, guid: 5b780f90f086343789da2fe52adddbf0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560509200224341923, guid: 5b780f90f086343789da2fe52adddbf0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560509200224341923, guid: 5b780f90f086343789da2fe52adddbf0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560509200224341923, guid: 5b780f90f086343789da2fe52adddbf0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560509200224341923, guid: 5b780f90f086343789da2fe52adddbf0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045155974757061913, guid: 5b780f90f086343789da2fe52adddbf0, type: 3}
+      propertyPath: m_Name
+      value: office_worker_6_SF
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b780f90f086343789da2fe52adddbf0, type: 3}
 --- !u!20 &232144128 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 5735977117089912518, guid: 4cfe8a530d1ae496198a0efa77196b27, type: 3}
@@ -345,7 +406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4229565581367448027, guid: 2ee54f6d0f7ce444ca38197dfd58f1e7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6500316680532285694, guid: 2ee54f6d0f7ce444ca38197dfd58f1e7, type: 3}
       propertyPath: m_LocalScale.x
@@ -471,6 +532,10 @@ PrefabInstance:
     - target: {fileID: 4867030923594849488, guid: 300958f6101434955b6f6af1f089418a, type: 3}
       propertyPath: m_Name
       value: Full screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867030923594849488, guid: 300958f6101434955b6f6af1f089418a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1605,3 +1670,4 @@ SceneRoots:
   - {fileID: 1290835724}
   - {fileID: 173014382}
   - {fileID: 901679021}
+  - {fileID: 181048152}

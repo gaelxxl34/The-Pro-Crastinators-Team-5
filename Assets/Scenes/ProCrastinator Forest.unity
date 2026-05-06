@@ -676,15 +676,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8745460828104678997, guid: 7065fd3be609741de91591234073711b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.16798261
+      value: -1.85
       objectReference: {fileID: 0}
     - target: {fileID: 8745460828104678997, guid: 7065fd3be609741de91591234073711b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1199996
+      value: -0.59
       objectReference: {fileID: 0}
     - target: {fileID: 8745460828104678997, guid: 7065fd3be609741de91591234073711b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.576359
+      value: 9.75
       objectReference: {fileID: 0}
     - target: {fileID: 8745460828104678997, guid: 7065fd3be609741de91591234073711b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -768,6 +768,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1001 &1656060487
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8560509200224341923, guid: 5b780f90f086343789da2fe52adddbf0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560509200224341923, guid: 5b780f90f086343789da2fe52adddbf0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560509200224341923, guid: 5b780f90f086343789da2fe52adddbf0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.854876
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560509200224341923, guid: 5b780f90f086343789da2fe52adddbf0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560509200224341923, guid: 5b780f90f086343789da2fe52adddbf0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560509200224341923, guid: 5b780f90f086343789da2fe52adddbf0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560509200224341923, guid: 5b780f90f086343789da2fe52adddbf0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560509200224341923, guid: 5b780f90f086343789da2fe52adddbf0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560509200224341923, guid: 5b780f90f086343789da2fe52adddbf0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560509200224341923, guid: 5b780f90f086343789da2fe52adddbf0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045155974757061913, guid: 5b780f90f086343789da2fe52adddbf0, type: 3}
+      propertyPath: m_Name
+      value: office_worker_6_SF
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b780f90f086343789da2fe52adddbf0, type: 3}
 --- !u!1001 &1854684653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1262,3 +1319,4 @@ SceneRoots:
   - {fileID: 1896182967}
   - {fileID: 854309546}
   - {fileID: 415338586}
+  - {fileID: 1656060487}
