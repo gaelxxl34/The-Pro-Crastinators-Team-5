@@ -119,11 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &125890222 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8220704178632492271, guid: 7065fd3be609741de91591234073711b, type: 3}
-  m_PrefabInstance: {fileID: 1290835724}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &173014382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -375,7 +370,7 @@ PrefabInstance:
     - target: {fileID: 1400188187098694244, guid: 317c76a92cda8415ca1c9639a093f634, type: 3}
       propertyPath: teleportObject
       value: 
-      objectReference: {fileID: 125890222}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -833,71 +828,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
---- !u!1001 &1290835724
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4478457418195503334, guid: 7065fd3be609741de91591234073711b, type: 3}
-      propertyPath: sceneName
-      value: ProCrastinator Main Office
-      objectReference: {fileID: 0}
-    - target: {fileID: 8220704178632492271, guid: 7065fd3be609741de91591234073711b, type: 3}
-      propertyPath: m_Name
-      value: teleport
-      objectReference: {fileID: 0}
-    - target: {fileID: 8220704178632492271, guid: 7065fd3be609741de91591234073711b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8745460828104678997, guid: 7065fd3be609741de91591234073711b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.16798261
-      objectReference: {fileID: 0}
-    - target: {fileID: 8745460828104678997, guid: 7065fd3be609741de91591234073711b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.1199996
-      objectReference: {fileID: 0}
-    - target: {fileID: 8745460828104678997, guid: 7065fd3be609741de91591234073711b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 14.576359
-      objectReference: {fileID: 0}
-    - target: {fileID: 8745460828104678997, guid: 7065fd3be609741de91591234073711b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8745460828104678997, guid: 7065fd3be609741de91591234073711b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8745460828104678997, guid: 7065fd3be609741de91591234073711b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8745460828104678997, guid: 7065fd3be609741de91591234073711b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8745460828104678997, guid: 7065fd3be609741de91591234073711b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8745460828104678997, guid: 7065fd3be609741de91591234073711b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8745460828104678997, guid: 7065fd3be609741de91591234073711b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7065fd3be609741de91591234073711b, type: 3}
 --- !u!114 &1358797359 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7026076385700297483, guid: 67e8df2420c30452c9bf15cbb0f9f9e1, type: 3}
@@ -1850,7 +1780,7 @@ PrefabInstance:
     - target: {fileID: 7026076385700297483, guid: 67e8df2420c30452c9bf15cbb0f9f9e1, type: 3}
       propertyPath: teleportObject
       value: 
-      objectReference: {fileID: 125890222}
+      objectReference: {fileID: 0}
     - target: {fileID: 7026076385700297483, guid: 67e8df2420c30452c9bf15cbb0f9f9e1, type: 3}
       propertyPath: raycastController
       value: 
@@ -1984,7 +1914,6 @@ SceneRoots:
   - {fileID: 1854684653}
   - {fileID: 328492580}
   - {fileID: 543961705}
-  - {fileID: 1290835724}
   - {fileID: 8159336996987267328}
   - {fileID: 173014382}
   - {fileID: 901679021}
