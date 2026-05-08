@@ -21,17 +21,14 @@ public class FocusClockPrefab : MonoBehaviour
     [Tooltip("Controller button used to click (default: JoystickButton1 = Button 2). Also accepts screen tap.")]
     public KeyCode clickButton = KeyCode.JoystickButton1;
 
-    /// <summary>
-    /// Other scripts can read this to know when to ignore keyboard input.
-    /// True while the setup panel is visible (timer not running).
-    /// </summary>
+    
     public bool IsKeyboardLocked { get; private set; }
 
-    // ─── Private Fields ───────────────────────────────────────────────────────
+  
 
     private FocusTimer _timer;
     private Canvas     _canvas;
-    private Camera     _cachedCam;      // cached camera reference
+    private Camera     _cachedCam;      
 
     private Image    _skyBg, _glowRing, _progressRing, _innerMask, _clockFace;
     private Image    _sunIcon, _sunGlow, _moonIcon;
@@ -43,13 +40,13 @@ public class FocusClockPrefab : MonoBehaviour
 
     private float _chosenSeconds;
 
-    // Reticle state
-    private GameObject _gazeTarget;    // button currently under gaze (for highlight)
 
-    // Cached gaze hit (used by both raycasting and reticle positioning)
+    private GameObject _gazeTarget;    
+
+    
     private bool    _gazeHitsCanvas;
-    private Vector2 _gazeCanvasLocal;   // local position on canvas where gaze lands
-    private Vector2 _gazeScreenPoint;   // screen-space point of gaze on canvas
+    private Vector2 _gazeCanvasLocal;   
+    private Vector2 _gazeScreenPoint;   
 
     private const int   STAR_COUNT   = 36;
     private const float DURATION_MIN = 10f;
@@ -71,7 +68,6 @@ public class FocusClockPrefab : MonoBehaviour
     private static readonly Color TEXT_DAY   = new Color(1.00f, 0.92f, 0.65f);
     private static readonly Color TEXT_NIGHT = new Color(0.80f, 0.85f, 1.00f);
 
-    // ─── Lifecycle ────────────────────────────────────────────────────────────
 
     void OnEnable()
     {
@@ -111,7 +107,6 @@ public class FocusClockPrefab : MonoBehaviour
             _canvas.transform.localScale = Vector3.one * (clockWorldSize / 400f);
         }
 
-        // Keep camera reference fresh
         _cachedCam = GetActiveCamera();
         if (_canvas != null && _canvas.worldCamera == null)
             _canvas.worldCamera = _cachedCam;
@@ -122,28 +117,25 @@ public class FocusClockPrefab : MonoBehaviour
             return;
         }
 
-        // ── Live countdown ──
+        
         if (_timer != null && _timer.IsRunning && _timeText != null)
             _timeText.text = FormatTime(_timer.SecondsLeft);
 
-        // ── Keyboard lock flag (other scripts check this) ──
+       
         IsKeyboardLocked = _setupPanel != null && _setupPanel.activeSelf;
 
-        // ── Gaze ray → canvas intersection (VR-safe) ──
+       
         ComputeGazePoint();
 
-        // ── Reticle / Dwell ──
         HandleReticle();
     }
 
-    // ─── Camera Helper ────────────────────────────────────────────────────────
-
+   
     Camera GetActiveCamera()
     {
-        // 1. Camera.main (requires "MainCamera" tag)
+    
         if (Camera.main != null) return Camera.main;
 
-        // 2. Any camera tagged MainCamera
         var tagged = GameObject.FindGameObjectWithTag("MainCamera");
         if (tagged != null)
         {
@@ -151,7 +143,6 @@ public class FocusClockPrefab : MonoBehaviour
             if (cam != null && cam.isActiveAndEnabled) return cam;
         }
 
-        // 3. Fallback: first active camera
         foreach (var cam in Camera.allCameras)
         {
             if (cam.isActiveAndEnabled) return cam;
@@ -159,13 +150,7 @@ public class FocusClockPrefab : MonoBehaviour
         return null;
     }
 
-    // ─── Gaze Point Calculation (VR-safe) ─────────────────────────────────────
 
-    /// <summary>
-    /// Casts a ray from camera FORWARD (not screen centre) and finds where
-    /// it hits the canvas plane. This works correctly in VR split-screen
-    /// because it doesn't depend on screen pixel coordinates at all.
-    /// </summary>
     void ComputeGazePoint()
     {
         _gazeHitsCanvas = false;
@@ -175,28 +160,25 @@ public class FocusClockPrefab : MonoBehaviour
         RectTransform canvasRT = _canvas.GetComponent<RectTransform>();
         if (canvasRT == null) return;
 
-        // Ray from camera position along camera forward
+   
         Vector3 camPos = _cachedCam.transform.position;
         Vector3 camFwd = _cachedCam.transform.forward;
 
-        // Canvas plane: defined by canvas position and its forward normal
-        // (canvas faces -forward in world space, but we just need the plane)
         Vector3 canvasPos    = _canvas.transform.position;
         Vector3 canvasNormal = _canvas.transform.forward;
 
         float denom = Vector3.Dot(canvasNormal, camFwd);
-        if (Mathf.Abs(denom) < 0.0001f) return;  // ray parallel to canvas
+        if (Mathf.Abs(denom) < 0.0001f) return;  
 
         float t = Vector3.Dot(canvasPos - camPos, canvasNormal) / denom;
-        if (t < 0f) return;  // canvas is behind camera
+        if (t < 0f) return;  
 
         Vector3 worldHit = camPos + camFwd * t;
 
-        // Convert world hit to canvas local coordinates
+
         Vector3 localHit3 = _canvas.transform.InverseTransformPoint(worldHit);
         _gazeCanvasLocal = new Vector2(localHit3.x, localHit3.y);
 
-        // Check if hit is within canvas bounds
         Vector2 canvasSize = canvasRT.sizeDelta;
         Vector2 pivot      = canvasRT.pivot;
         float minX = -canvasSize.x * pivot.x;
@@ -208,16 +190,13 @@ public class FocusClockPrefab : MonoBehaviour
             _gazeCanvasLocal.y < minY || _gazeCanvasLocal.y > maxY)
             return;  // gaze is outside canvas
 
-        // Convert world hit to screen-space for GraphicRaycaster
+
         _gazeScreenPoint = _cachedCam.WorldToScreenPoint(worldHit);
         _gazeHitsCanvas  = true;
     }
 
-    // ─── Reticle / Dwell Input ────────────────────────────────────────────────
-
     void HandleReticle()
     {
-        // Position the reticle dot on the canvas
         if (_reticleDot != null)
         {
             if (_gazeHitsCanvas)
@@ -230,7 +209,6 @@ public class FocusClockPrefab : MonoBehaviour
                 _reticleDot.enabled = false;
             }
 
-            // Gentle pulse so user knows reticle is alive
             if (_reticleDot.enabled)
             {
                 float pulse = 0.6f + 0.2f * Mathf.Sin(Time.time * 3f);
@@ -240,10 +218,9 @@ public class FocusClockPrefab : MonoBehaviour
             }
         }
 
-        // Only do hit-testing if gaze is on the canvas
         if (!_gazeHitsCanvas || EventSystem.current == null) return;
 
-        // Check for controller click (Button 2) or screen tap or B button
+
         bool clicked = Input.GetKeyDown(clickButton)
                     || Input.GetKeyDown(KeyCode.B)
                     || Input.GetKeyDown(KeyCode.K)
@@ -252,7 +229,6 @@ public class FocusClockPrefab : MonoBehaviour
 
         if (!clicked) return;
 
-        // Raycast to find which button the reticle is on
         var eventData = new PointerEventData(EventSystem.current)
         {
             position = _gazeScreenPoint
@@ -274,8 +250,6 @@ public class FocusClockPrefab : MonoBehaviour
             }
         }
     }
-
-    // ─── Timer Events ─────────────────────────────────────────────────────────
 
     void OnSessionStart()
     {
@@ -299,8 +273,6 @@ public class FocusClockPrefab : MonoBehaviour
         _sessionPanel?.SetActive(false);
     }
 
-    // ─── Duration Adjustment ──────────────────────────────────────────────────
-
     void AdjustDuration(float deltaSeconds)
     {
         _chosenSeconds = Mathf.Clamp(_chosenSeconds + deltaSeconds, DURATION_MIN, DURATION_MAX);
@@ -311,8 +283,6 @@ public class FocusClockPrefab : MonoBehaviour
         if (_timeText != null && (_timer == null || !_timer.IsRunning))
             _timeText.text = FormatTime(_chosenSeconds);
     }
-
-    // ─── Time Formatting ──────────────────────────────────────────────────────
 
     string FormatTime(float seconds)
     {
@@ -329,8 +299,6 @@ public class FocusClockPrefab : MonoBehaviour
         int ss = totalSec % 60;
         return ss == 0 ? $"{mm} min" : $"{mm}m {ss}s";
     }
-
-    // ─── Progress ─────────────────────────────────────────────────────────────
 
     void OnProgress(float p)
     {
@@ -448,7 +416,6 @@ public class FocusClockPrefab : MonoBehaviour
         Color gc = _glowRing.color; gc.a = pulse; _glowRing.color = gc;
     }
 
-    // ─── Builder ──────────────────────────────────────────────────────────────
 
     void BuildClockHierarchy()
     {
@@ -467,7 +434,6 @@ public class FocusClockPrefab : MonoBehaviour
         canvasGO.transform.position   = worldPosition;
         canvasGO.transform.localScale = Vector3.one * (clockWorldSize / 400f);
 
-        // Only create EventSystem if none exists — don't conflict with VR SDK
         if (Application.isPlaying && FindObjectOfType<EventSystem>() == null)
         {
             var es = new GameObject("EventSystem");
@@ -475,13 +441,12 @@ public class FocusClockPrefab : MonoBehaviour
             es.AddComponent<StandaloneInputModule>();
         }
 
-        // ── Sky ──
         _skyBg = MakeImage(canvasGO, "SkyBg", MakeCircleTex(200, SKY_COLORS[0]));
         _skyBg.rectTransform.sizeDelta        = new Vector2(380f, 380f);
         _skyBg.rectTransform.anchoredPosition = Vector2.zero;
         _skyBg.color = SKY_COLORS[0];
 
-        // ── Stars ──
+    
         _stars = new Image[STAR_COUNT];
         var starTex = MakeCircleTex(5, Color.white);
         var rng = new System.Random(42);
@@ -499,13 +464,11 @@ public class FocusClockPrefab : MonoBehaviour
             _stars[i].color = new Color(1f, 1f, 1f, 0.92f);
         }
 
-        // ── Outer glow ring ──
         _glowRing = MakeImage(canvasGO, "GlowRing", MakeRingTex(192, 176, RING_DAY));
         _glowRing.rectTransform.sizeDelta        = new Vector2(384f, 384f);
         _glowRing.rectTransform.anchoredPosition = Vector2.zero;
         _glowRing.color = RING_DAY;
 
-        // ── Progress ring ──
         _progressRing = MakeImage(canvasGO, "ProgressRing", MakeCircleTex(170, RING_DAY));
         _progressRing.type          = Image.Type.Filled;
         _progressRing.fillMethod    = Image.FillMethod.Radial360;
@@ -516,13 +479,11 @@ public class FocusClockPrefab : MonoBehaviour
         _progressRing.rectTransform.sizeDelta        = new Vector2(340f, 340f);
         _progressRing.rectTransform.anchoredPosition = Vector2.zero;
 
-        // ── Inner mask ──
         _innerMask = MakeImage(canvasGO, "InnerMask", MakeCircleTex(152, SKY_COLORS[0]));
         _innerMask.color = SKY_COLORS[0];
         _innerMask.rectTransform.sizeDelta        = new Vector2(304f, 304f);
         _innerMask.rectTransform.anchoredPosition = Vector2.zero;
 
-        // ── Clock face ──
         _clockFace = MakeImage(canvasGO, "ClockFace", MakeCircleTex(148, FACE_DAY));
         _clockFace.color = FACE_DAY;
         _clockFace.rectTransform.sizeDelta        = new Vector2(296f, 296f);
@@ -548,7 +509,6 @@ public class FocusClockPrefab : MonoBehaviour
                 : new Color(1f, 0.85f, 0.30f, 0.45f);
         }
 
-        // ── Hand ──
         var pGO    = new GameObject("HandPivot");
         pGO.transform.SetParent(_clockFace.transform, false);
         _handPivot = pGO.AddComponent<RectTransform>();
@@ -571,7 +531,6 @@ public class FocusClockPrefab : MonoBehaviour
         cap.rectTransform.sizeDelta        = new Vector2(14f, 14f);
         cap.rectTransform.anchoredPosition = Vector2.zero;
 
-        // ── Sun ──
         _sunIcon = MakeImage(canvasGO, "Sun", MakeCircleTex(14, new Color(1f, 0.88f, 0.2f)));
         _sunIcon.color = new Color(1f, 0.88f, 0.2f);
         _sunIcon.rectTransform.sizeDelta        = new Vector2(28f, 28f);
@@ -582,14 +541,14 @@ public class FocusClockPrefab : MonoBehaviour
         _sunGlow.rectTransform.sizeDelta        = new Vector2(48f, 48f);
         _sunGlow.rectTransform.anchoredPosition = new Vector2(-110f, 10f);
 
-        // ── Moon ──
+      
         _moonIcon = MakeImage(canvasGO, "Moon", MakeCircleTex(14, new Color(0.88f, 0.92f, 1f)));
         _moonIcon.color = new Color(0.88f, 0.92f, 1f, 0f);
         _moonIcon.rectTransform.sizeDelta        = new Vector2(28f, 28f);
         _moonIcon.rectTransform.anchoredPosition = new Vector2(110f, 10f);
         _moonIcon.rectTransform.localScale       = Vector3.one * 0.1f;
 
-        // ── Time text ──
+       
         _timeText = MakeText(canvasGO, "TimeText", FormatTime(_chosenSeconds), 40);
         _timeText.rectTransform.anchoredPosition = new Vector2(0f, -38f);
         _timeText.color    = TEXT_DAY;
@@ -600,9 +559,7 @@ public class FocusClockPrefab : MonoBehaviour
         _statusText.color = new Color(1f, 0.9f, 0.6f, 0.65f);
         _statusText.characterSpacing = 2.5f;
 
-        // ══════════════════════════════════════════════════════════════════════
-        //  SETUP PANEL — increment/decrement buttons instead of slider
-        // ══════════════════════════════════════════════════════════════════════
+        
         _setupPanel = new GameObject("SetupPanel");
         _setupPanel.transform.SetParent(canvasGO.transform, false);
         var spRT = _setupPanel.AddComponent<RectTransform>();
@@ -615,8 +572,7 @@ public class FocusClockPrefab : MonoBehaviour
         _durationLabel.color     = new Color(1f, 0.88f, 0.55f);
         _durationLabel.fontStyle = FontStyles.Bold;
 
-        // ── Increment / Decrement Buttons Row ──
-        //    Layout:  [ -5m ] [ -1m ] [ +1m ] [ +5m ]
+        
         float btnY     = 14f;
         float btnW     = 52f;
         float btnH     = 28f;   // slightly taller for easier dwell targeting
@@ -637,7 +593,7 @@ public class FocusClockPrefab : MonoBehaviour
                 xPos, btnY, btnW, btnH, btnBgColor, btnTextColor);
         }
 
-        // ── Start Button ──
+        
         var startBtnImg = MakeImage(_setupPanel, "StartBtn",
             MakeRoundRectTex(150, 36, 8, new Color(1f, 0.75f, 0.15f)));
         startBtnImg.color = new Color(1f, 0.75f, 0.15f);
@@ -656,9 +612,7 @@ public class FocusClockPrefab : MonoBehaviour
             btn.onClick.AddListener(() => _timer.StartSession());
         }
 
-        // ══════════════════════════════════════════════════════════════════════
-        //  SESSION PANEL — visible while timer is running
-        // ══════════════════════════════════════════════════════════════════════
+        
         _sessionPanel = new GameObject("SessionPanel");
         _sessionPanel.transform.SetParent(canvasGO.transform, false);
         var sesRT = _sessionPanel.AddComponent<RectTransform>();
@@ -683,18 +637,15 @@ public class FocusClockPrefab : MonoBehaviour
             exitBtn.targetGraphic = exitImg;
             exitBtn.onClick.AddListener(() => _timer.ExitFocusMode());
         }
-
-        // ── Reticle (gaze indicator — follows camera forward on canvas) ──
         if (showReticleDot)
         {
-            // Outer ring — larger for phone visibility
+           
             _reticleDot = MakeImage(canvasGO, "ReticleDot",
                 MakeRingTex(14, 10, new Color(1f, 1f, 1f, 0.90f)));
             _reticleDot.color = new Color(1f, 1f, 1f, 0.65f);
             _reticleDot.rectTransform.sizeDelta        = new Vector2(28f, 28f);
             _reticleDot.rectTransform.anchoredPosition = Vector2.zero;
 
-            // Centre dot for visibility
             var centreDot = MakeImage(_reticleDot.gameObject, "CentreDot",
                 MakeCircleTex(4, new Color(1f, 1f, 1f, 0.90f)));
             centreDot.color = new Color(1f, 1f, 1f, 0.80f);
@@ -702,8 +653,6 @@ public class FocusClockPrefab : MonoBehaviour
             centreDot.rectTransform.anchoredPosition = Vector2.zero;
         }
     }
-
-    // ─── Adjust Button Factory ────────────────────────────────────────────────
 
     void CreateAdjustButton(GameObject parent, string label, float deltaSec,
         float x, float y, float w, float h, Color bgColor, Color textColor)
@@ -729,7 +678,6 @@ public class FocusClockPrefab : MonoBehaviour
         }
     }
 
-    // ─── Texture Factories ────────────────────────────────────────────────────
 
     Texture2D MakeCircleTex(int radius, Color color)
     {
