@@ -1450,6 +1450,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &1106426060 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7578622174322639622, guid: acbb096cf2df87f4eb3fb1e37faa5ed7, type: 3}
+  m_PrefabInstance: {fileID: 8042493498589560572}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1106426061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106426060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb54b7de68760404082a22e370a3ee6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HighlightObject
 --- !u!114 &1125452049 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7026076385700297483, guid: 67e8df2420c30452c9bf15cbb0f9f9e1, type: 3}
@@ -3076,7 +3093,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7578622174322639622, guid: acbb096cf2df87f4eb3fb1e37faa5ed7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1106426061}
   m_SourcePrefab: {fileID: 100100000, guid: acbb096cf2df87f4eb3fb1e37faa5ed7, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
