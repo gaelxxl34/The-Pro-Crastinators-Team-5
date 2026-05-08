@@ -995,14 +995,6 @@
             "icon": null
           },
           {
-            "name": "CapsuleCollider",
-            "scenes": [
-              "Assets/Scenes/ProCrastinator Main Office.unity"
-            ],
-            "dependencyType": 0,
-            "icon": null
-          },
-          {
             "name": "CharacterController",
             "scenes": [
               "Assets/Scenes/ProCrastinator Beach.unity",

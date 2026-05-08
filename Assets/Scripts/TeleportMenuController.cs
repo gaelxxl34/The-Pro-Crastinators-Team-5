@@ -88,14 +88,11 @@ public class TeleportMenuController : MonoBehaviour
         if (vert < -0.5f) { if (!_dpadDownHeld) { axisDown = true; _dpadDownHeld = true; } }
         else              { _dpadDownHeld = false; }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow)   || Input.GetKeyDown(KeyCode.W) || axisUp)
+        if (Input.GetKeyDown(KeyCode.UpArrow) || axisUp)
             SetSelection((_selectedIndex - 1 + _navButtons.Length) % _navButtons.Length);
         else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S) || axisDown)
             SetSelection((_selectedIndex + 1) % _navButtons.Length);
-        else if (Input.GetKeyDown(KeyCode.B)
-              || Input.GetKeyDown(KeyCode.K)
-              || Input.GetKeyDown(KeyCode.JoystickButton5)
-              || Input.GetKeyDown(KeyCode.Return))
+        else if (Input.GetKeyDown(KeyCode.JoystickButton0))
             ConfirmSelection();
     }
 

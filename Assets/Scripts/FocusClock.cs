@@ -8,8 +8,8 @@ using TMPro;
 public class FocusClockPrefab : MonoBehaviour
 {
     [Header("Canvas Position in World")]
-    public Vector3 worldPosition  = new Vector3(0f, 1.5f, 2f);
-    public float   clockWorldSize = 0.6f;
+    public Vector3 worldPosition;
+    public float   clockWorldSize;
 
     [Header("Default Session Duration")]
     [Tooltip("Duration in seconds (10 = 10s, 1500 = 25 min). Minimum 10 seconds.")]
@@ -21,10 +21,6 @@ public class FocusClockPrefab : MonoBehaviour
     [Tooltip("Controller button used to click (default: JoystickButton1 = Button 2). Also accepts screen tap.")]
     public KeyCode clickButton = KeyCode.JoystickButton1;
 
-    /// <summary>
-    /// Other scripts can read this to know when to ignore keyboard input.
-    /// True while the setup panel is visible (timer not running).
-    /// </summary>
     public bool IsKeyboardLocked { get; private set; }
 
     // ─── Private Fields ───────────────────────────────────────────────────────
@@ -159,13 +155,7 @@ public class FocusClockPrefab : MonoBehaviour
         return null;
     }
 
-    // ─── Gaze Point Calculation (VR-safe) ─────────────────────────────────────
-
-    /// <summary>
-    /// Casts a ray from camera FORWARD (not screen centre) and finds where
-    /// it hits the canvas plane. This works correctly in VR split-screen
-    /// because it doesn't depend on screen pixel coordinates at all.
-    /// </summary>
+    // ─── Gaze Point Calculation ─────────────────────────────────────
     void ComputeGazePoint()
     {
         _gazeHitsCanvas = false;

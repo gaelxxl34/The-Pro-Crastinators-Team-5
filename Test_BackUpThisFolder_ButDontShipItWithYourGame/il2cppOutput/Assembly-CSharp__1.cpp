@@ -490,6 +490,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral386364D784E9EBB79BC2A529A56F1826D1CD16F6
 IL2CPP_EXTERN_C String_t* _stringLiteral3B2C1C62D4D1C2A0C8A9AC42DB00D33C654F9AD0;
 IL2CPP_EXTERN_C String_t* _stringLiteral3F3FD3EFA55E39E450A9A4CE66CD7B259403D44E;
 IL2CPP_EXTERN_C String_t* _stringLiteral3F896536E53D3F80B7E86369F40C31A5FC1D967C;
+IL2CPP_EXTERN_C String_t* _stringLiteral3F8AC95C3780E1A4D4A4208F1ADA68D8D5630128;
 IL2CPP_EXTERN_C String_t* _stringLiteral4145D4DCFC9CA6357FE762FBD478CD2066275640;
 IL2CPP_EXTERN_C String_t* _stringLiteral42646B33B50B6AA15E22733C8900716F0FE19E1D;
 IL2CPP_EXTERN_C String_t* _stringLiteral488BBD09F4A1A1F043A936DD66A4830B2FFA8FFC;
@@ -537,7 +538,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteralA16C742C90650F9298DED1A534CD15E977169FD3
 IL2CPP_EXTERN_C String_t* _stringLiteralA294DAD207C32424675CE40B7B7673FBE9C295B3;
 IL2CPP_EXTERN_C String_t* _stringLiteralA3C48F920CA03FE8BCEF33375645725C40BA7ADD;
 IL2CPP_EXTERN_C String_t* _stringLiteralA3DFC0C77ACADE0EE48DCC73E795A597D0270A73;
-IL2CPP_EXTERN_C String_t* _stringLiteralA5407DDB8018C2B67AF65BD6FF0E7DAE78AE9B98;
 IL2CPP_EXTERN_C String_t* _stringLiteralA6107EE62A5874EF8D2DEAC7D3C0A9F07B89E096;
 IL2CPP_EXTERN_C String_t* _stringLiteralA8278F985564CFE994A2F9341AE9337C9EA96833;
 IL2CPP_EXTERN_C String_t* _stringLiteralA87D266F5AAE1AF5998468D25833A8C6AD50D4FD;
@@ -583,6 +583,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralFB8AF18756516FB4C877D7B125AB7DEE7CD9E3CD
 IL2CPP_EXTERN_C String_t* _stringLiteralFC6687DC37346CD2569888E29764F727FAF530E0;
 IL2CPP_EXTERN_C String_t* _stringLiteralFCE381C81B740302BB37D917EC526F53ED92E5CB;
 IL2CPP_EXTERN_C String_t* _stringLiteralFE566FEFE77E0B16136ADCE410AD98FF054E2937;
+IL2CPP_EXTERN_C String_t* _stringLiteralFFEF3DBE279EE1F92E1E2E46F45BC18EBBF55A1A;
 IL2CPP_EXTERN_C const RuntimeMethod* ChatController_AddToChatOutput_m9AB8FA8A32EA23F2E55795D8301ED0BF6A59F722_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponentInChildren_TisTextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957_m60A1B193FDBBFB3719065622DB5E0BB21CA4ABDC_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponentInChildren_TisXRCardboardReticle_tA28B843F90F1EA424785C5ACF0F4794E46402CAE_m98FBA8AD3CB531379E1653FE596E4BE7432037F5_RuntimeMethod_var;
@@ -3437,7 +3438,6 @@ struct TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97  : publi
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___forestButton;
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___officeButton;
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___cancelButton;
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___teleportObject;
 	ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* ____navButtons;
 	int32_t ____selectedIndex;
 	bool ____isOpen;
@@ -12759,7 +12759,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_Start_m444D5B9DD1
 	Scene_tA1DC762B79745EB5140F054C884855B922318356 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:49>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:46>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___menuCanvas;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -12770,7 +12770,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_Start_m444D5B9DD1
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:49>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:46>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___menuCanvas;
 		NullCheck(L_2);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)0, NULL);
@@ -12778,117 +12778,98 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_Start_m444D5B9DD1
 
 IL_001a:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:50>
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___teleportObject;
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:47>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___player;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_4;
 		L_4 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_3, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_4)
 		{
-			goto IL_0034;
+			goto IL_0053;
+		}
+	}
+	{
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:49>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = __this->___player;
+		NullCheck(L_5);
+		CharacterMovement_t9D8626C3C95447C5CD13E831D32857E23BD590FA* L_6;
+		L_6 = GameObject_GetComponent_TisCharacterMovement_t9D8626C3C95447C5CD13E831D32857E23BD590FA_m0ABB9B8532E7EFFC81EA3D072745CD753DEDD188(L_5, GameObject_GetComponent_TisCharacterMovement_t9D8626C3C95447C5CD13E831D32857E23BD590FA_m0ABB9B8532E7EFFC81EA3D072745CD753DEDD188_RuntimeMethod_var);
+		__this->____characterMovement = L_6;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____characterMovement), (void*)L_6);
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:50>
+		CharacterMovement_t9D8626C3C95447C5CD13E831D32857E23BD590FA* L_7 = __this->____characterMovement;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_8;
+		L_8 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_7, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_8)
+		{
+			goto IL_0053;
 		}
 	}
 	{
 		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:50>
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = __this->___teleportObject;
-		NullCheck(L_5);
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_5, (bool)0, NULL);
+		CharacterMovement_t9D8626C3C95447C5CD13E831D32857E23BD590FA* L_9 = __this->____characterMovement;
+		NullCheck(L_9);
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_9, (bool)1, NULL);
 	}
 
-IL_0034:
+IL_0053:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:51>
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = __this->___player;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_7;
-		L_7 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_6, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_7)
-		{
-			goto IL_006d;
-		}
-	}
-	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:53>
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8 = __this->___player;
-		NullCheck(L_8);
-		CharacterMovement_t9D8626C3C95447C5CD13E831D32857E23BD590FA* L_9;
-		L_9 = GameObject_GetComponent_TisCharacterMovement_t9D8626C3C95447C5CD13E831D32857E23BD590FA_m0ABB9B8532E7EFFC81EA3D072745CD753DEDD188(L_8, GameObject_GetComponent_TisCharacterMovement_t9D8626C3C95447C5CD13E831D32857E23BD590FA_m0ABB9B8532E7EFFC81EA3D072745CD753DEDD188_RuntimeMethod_var);
-		__this->____characterMovement = L_9;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->____characterMovement), (void*)L_9);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:54>
-		CharacterMovement_t9D8626C3C95447C5CD13E831D32857E23BD590FA* L_10 = __this->____characterMovement;
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:52>
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_10 = __this->___cam;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_11;
 		L_11 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_10, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_11)
 		{
-			goto IL_006d;
+			goto IL_009c;
 		}
 	}
 	{
 		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:54>
-		CharacterMovement_t9D8626C3C95447C5CD13E831D32857E23BD590FA* L_12 = __this->____characterMovement;
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_12 = __this->___cam;
 		NullCheck(L_12);
-		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_12, (bool)1, NULL);
-	}
-
-IL_006d:
-	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:56>
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_13 = __this->___cam;
+		XRCardboardReticle_tA28B843F90F1EA424785C5ACF0F4794E46402CAE* L_13;
+		L_13 = Component_GetComponentInChildren_TisXRCardboardReticle_tA28B843F90F1EA424785C5ACF0F4794E46402CAE_m98FBA8AD3CB531379E1653FE596E4BE7432037F5(L_12, (bool)1, Component_GetComponentInChildren_TisXRCardboardReticle_tA28B843F90F1EA424785C5ACF0F4794E46402CAE_m98FBA8AD3CB531379E1653FE596E4BE7432037F5_RuntimeMethod_var);
+		__this->____reticle = L_13;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____reticle), (void*)L_13);
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:55>
+		XRCardboardReticle_tA28B843F90F1EA424785C5ACF0F4794E46402CAE* L_14 = __this->____reticle;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_14;
-		L_14 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_13, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_14)
+		bool L_15;
+		L_15 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_14, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_15)
 		{
-			goto IL_00b6;
+			goto IL_009c;
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:58>
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_15 = __this->___cam;
-		NullCheck(L_15);
-		XRCardboardReticle_tA28B843F90F1EA424785C5ACF0F4794E46402CAE* L_16;
-		L_16 = Component_GetComponentInChildren_TisXRCardboardReticle_tA28B843F90F1EA424785C5ACF0F4794E46402CAE_m98FBA8AD3CB531379E1653FE596E4BE7432037F5(L_15, (bool)1, Component_GetComponentInChildren_TisXRCardboardReticle_tA28B843F90F1EA424785C5ACF0F4794E46402CAE_m98FBA8AD3CB531379E1653FE596E4BE7432037F5_RuntimeMethod_var);
-		__this->____reticle = L_16;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->____reticle), (void*)L_16);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:59>
-		XRCardboardReticle_tA28B843F90F1EA424785C5ACF0F4794E46402CAE* L_17 = __this->____reticle;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_18;
-		L_18 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_17, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_18)
-		{
-			goto IL_00b6;
-		}
-	}
-	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:59>
-		XRCardboardReticle_tA28B843F90F1EA424785C5ACF0F4794E46402CAE* L_19 = __this->____reticle;
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:55>
+		XRCardboardReticle_tA28B843F90F1EA424785C5ACF0F4794E46402CAE* L_16 = __this->____reticle;
+		NullCheck(L_16);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_17;
+		L_17 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_16, NULL);
+		NullCheck(L_17);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_18;
+		L_18 = Transform_get_parent_m65354E28A4C94EC00EBCF03532F7B0718380791E(L_17, NULL);
+		NullCheck(L_18);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_19;
+		L_19 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_18, NULL);
 		NullCheck(L_19);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_20;
-		L_20 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_19, NULL);
-		NullCheck(L_20);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_21;
-		L_21 = Transform_get_parent_m65354E28A4C94EC00EBCF03532F7B0718380791E(L_20, NULL);
-		NullCheck(L_21);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_22;
-		L_22 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_21, NULL);
-		NullCheck(L_22);
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_22, (bool)1, NULL);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_19, (bool)1, NULL);
 	}
 
-IL_00b6:
+IL_009c:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:61>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:57>
 		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
-		Scene_tA1DC762B79745EB5140F054C884855B922318356 L_23;
-		L_23 = SceneManager_GetActiveScene_m0B320EC4302F51A71495D1CCD1A0FF9C2ED1FDC8(NULL);
-		V_0 = L_23;
-		String_t* L_24;
-		L_24 = Scene_get_name_m3C818DFA663E159274DAD823B780C7616C5E2A8C((&V_0), NULL);
-		TeleportMenuController_MarkCurrentScene_m25658F4743F2E966D08192C445E38E5744393849(__this, L_24, NULL);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:62>
+		Scene_tA1DC762B79745EB5140F054C884855B922318356 L_20;
+		L_20 = SceneManager_GetActiveScene_m0B320EC4302F51A71495D1CCD1A0FF9C2ED1FDC8(NULL);
+		V_0 = L_20;
+		String_t* L_21;
+		L_21 = Scene_get_name_m3C818DFA663E159274DAD823B780C7616C5E2A8C((&V_0), NULL);
+		TeleportMenuController_MarkCurrentScene_m25658F4743F2E966D08192C445E38E5744393849(__this, L_21, NULL);
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:58>
 		return;
 	}
 }
@@ -12907,7 +12888,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_OnGUI_mAB05768466
 	float V_2 = 0.0f;
 	float V_3 = 0.0f;
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:66>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:62>
 		String_t* L_0 = __this->____guiMessage;
 		bool L_1;
 		L_1 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_0, NULL);
@@ -12928,21 +12909,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_OnGUI_mAB05768466
 
 IL_001a:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:66>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:62>
 		return;
 	}
 
 IL_001b:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:68>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:64>
 		GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* L_4 = (GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580*)il2cpp_codegen_object_new(GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580_il2cpp_TypeInfo_var);
 		GUIStyle__ctor_mE15E33802C5A2EA787E445A6D424813E1D5B75A9(L_4, NULL);
 		V_0 = L_4;
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:69>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:65>
 		GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* L_5 = V_0;
 		NullCheck(L_5);
 		GUIStyle_set_fontSize_m7F6DFD61AC55072C95DC3825B77FAE3F75F1CCFF(L_5, ((int32_t)52), NULL);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:70>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:66>
 		GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* L_6 = V_0;
 		NullCheck(L_6);
 		GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95* L_7;
@@ -12951,30 +12932,30 @@ IL_001b:
 		L_8 = Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline(NULL);
 		NullCheck(L_7);
 		GUIStyleState_set_textColor_m5868D12858E6402247953BCCDDA7A543BE6084F1(L_7, L_8, NULL);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:71>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:67>
 		GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* L_9 = V_0;
 		NullCheck(L_9);
 		GUIStyle_set_alignment_mEDC62A775C9551DBD1FEE4043F115E034EF12937(L_9, 4, NULL);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:72>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:68>
 		GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* L_10 = V_0;
 		NullCheck(L_10);
 		GUIStyle_set_wordWrap_m7A232701F60F4EB8FAFA57F6BAF9F94731DD009C(L_10, (bool)1, NULL);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:74>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:70>
 		int32_t L_11;
 		L_11 = Screen_get_width_mF608FF3252213E7EFA1F0D2F744C28110E9E5AC9(NULL);
 		V_1 = ((float)il2cpp_codegen_multiply(((float)L_11), (0.699999988f)));
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:75>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:71>
 		V_2 = (160.0f);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:76>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:72>
 		int32_t L_12;
 		L_12 = Screen_get_width_mF608FF3252213E7EFA1F0D2F744C28110E9E5AC9(NULL);
 		float L_13 = V_1;
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:77>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:73>
 		int32_t L_14;
 		L_14 = Screen_get_height_m01A3102DE71EE1FBEA51D09D6B0261CF864FE8F9(NULL);
 		float L_15 = V_2;
 		V_3 = ((float)(((float)il2cpp_codegen_subtract(((float)L_14), L_15))/(2.0f)));
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:78>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:74>
 		float L_16 = V_3;
 		float L_17 = V_1;
 		float L_18 = V_2;
@@ -12985,7 +12966,7 @@ IL_001b:
 		GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* L_21 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(GUI_tA9CDB3D69DB13D51AD83ABDB587EF95947EC2D2A_il2cpp_TypeInfo_var);
 		GUI_Label_m0D7BA53414421D71010DFF628EAA6CCCB3DE737E(L_19, L_20, L_21, NULL);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:79>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:75>
 		return;
 	}
 }
@@ -13007,7 +12988,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_Update_m7B5CD0CBC
 	int32_t G_B15_0 = 0;
 	int32_t G_B20_0 = 0;
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:83>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:79>
 		bool L_0 = __this->____isOpen;
 		if (!L_0)
 		{
@@ -13032,18 +13013,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_Update_m7B5CD0CBC
 
 IL_0019:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:83>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:79>
 		return;
 	}
 
 IL_001a:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:86>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:82>
 		float L_3;
 		L_3 = Input_GetAxisRaw_m47C0CF8E090561A2F407A4E11D5F2A45044EB8E4(_stringLiteral265E15F1F86F1C766555899D5771CF29055DE75A, NULL);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:87>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:83>
 		V_0 = (bool)0;
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:88>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:84>
 		float L_4 = L_3;
 		if ((!(((float)L_4) > ((float)(0.5f)))))
 		{
@@ -13053,7 +13034,7 @@ IL_001a:
 		G_B5_0 = L_4;
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:88>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:84>
 		bool L_5 = __this->____dpadUpHeld;
 		if (L_5)
 		{
@@ -13063,9 +13044,9 @@ IL_001a:
 		G_B6_0 = G_B5_0;
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:88>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:84>
 		V_0 = (bool)1;
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:88>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:84>
 		__this->____dpadUpHeld = (bool)1;
 		G_B8_0 = G_B6_0;
 		goto IL_0048;
@@ -13073,23 +13054,23 @@ IL_001a:
 
 IL_0041:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:89>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:85>
 		__this->____dpadUpHeld = (bool)0;
 		G_B8_0 = G_B7_0;
 	}
 
 IL_0048:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:91>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:87>
 		V_1 = (bool)0;
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:92>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:88>
 		if ((!(((float)G_B8_0) < ((float)(-0.5f)))))
 		{
 			goto IL_0064;
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:92>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:88>
 		bool L_6 = __this->____dpadDownHeld;
 		if (L_6)
 		{
@@ -13097,22 +13078,22 @@ IL_0048:
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:92>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:88>
 		V_1 = (bool)1;
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:92>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:88>
 		__this->____dpadDownHeld = (bool)1;
 		goto IL_006b;
 	}
 
 IL_0064:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:93>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:89>
 		__this->____dpadDownHeld = (bool)0;
 	}
 
 IL_006b:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:95>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:91>
 		bool L_7;
 		L_7 = Input_GetKeyDown_mB237DEA6244132670D38990BAB77D813FBB028D2(((int32_t)273), NULL);
 		if (L_7)
@@ -13141,7 +13122,7 @@ IL_0081:
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:96>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:92>
 		int32_t L_10 = __this->____selectedIndex;
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_11 = __this->____navButtons;
 		NullCheck(L_11);
@@ -13153,7 +13134,7 @@ IL_0081:
 
 IL_00a6:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:97>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:93>
 		bool L_13;
 		L_13 = Input_GetKeyDown_mB237DEA6244132670D38990BAB77D813FBB028D2(((int32_t)274), NULL);
 		if (L_13)
@@ -13182,7 +13163,7 @@ IL_00bc:
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:98>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:94>
 		int32_t L_16 = __this->____selectedIndex;
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_17 = __this->____navButtons;
 		NullCheck(L_17);
@@ -13192,10 +13173,10 @@ IL_00bc:
 
 IL_00d8:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:99>
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:100>
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:101>
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:102>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:95>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:96>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:97>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:98>
 		bool L_18;
 		L_18 = Input_GetKeyDown_mB237DEA6244132670D38990BAB77D813FBB028D2(((int32_t)98), NULL);
 		if (L_18)
@@ -13230,13 +13211,13 @@ IL_00d8:
 
 IL_00ff:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:103>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:99>
 		TeleportMenuController_ConfirmSelection_mA77E60B1286FE6C4353F8625BF89BBE6F2BEB17F(__this, NULL);
 	}
 
 IL_0105:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:104>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:100>
 		return;
 	}
 }
@@ -13267,7 +13248,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_OpenMenu_mB02E012
 	String_t* G_B6_0 = NULL;
 	String_t* G_B7_0 = NULL;
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:108>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:104>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___menuCanvas;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -13278,35 +13259,35 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_OpenMenu_mB02E012
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:108>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:104>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteralB675063D09F22AE880286AD7802902DB86DFA8DD, NULL);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:108>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:104>
 		return;
 	}
 
 IL_0019:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:110>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:106>
 		__this->____isOpen = (bool)1;
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:111>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:107>
 		TeleportMenuController_SetButtonsVisible_m1D03B874578A19F55643BADBE3240718B3EC0320(__this, (bool)1, NULL);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:112>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:108>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___menuCanvas;
 		NullCheck(L_2);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)1, NULL);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:114>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:110>
 		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
 		Scene_tA1DC762B79745EB5140F054C884855B922318356 L_3;
 		L_3 = SceneManager_GetActiveScene_m0B320EC4302F51A71495D1CCD1A0FF9C2ED1FDC8(NULL);
 		V_1 = L_3;
 		String_t* L_4;
 		L_4 = Scene_get_name_m3C818DFA663E159274DAD823B780C7616C5E2A8C((&V_1), NULL);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:115>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:111>
 		List_1_tCB5B3B0C70F6DFB6B059BB2C65DC77B101849444* L_5 = (List_1_tCB5B3B0C70F6DFB6B059BB2C65DC77B101849444*)il2cpp_codegen_object_new(List_1_tCB5B3B0C70F6DFB6B059BB2C65DC77B101849444_il2cpp_TypeInfo_var);
 		List_1__ctor_mBCE3BE1FB943396333E483F66490F0690048CA2E(L_5, List_1__ctor_mBCE3BE1FB943396333E483F66490F0690048CA2E_RuntimeMethod_var);
 		V_0 = L_5;
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:116>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:112>
 		String_t* L_6 = L_4;
 		il2cpp_codegen_runtime_class_init_inline(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var);
 		String_t* L_7 = ((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___SCENE_BEACH;
@@ -13332,7 +13313,7 @@ IL_0019:
 		G_B4_0 = G_B3_0;
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:116>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:112>
 		List_1_tCB5B3B0C70F6DFB6B059BB2C65DC77B101849444* L_11 = V_0;
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_12 = __this->___beachButton;
 		NullCheck(L_11);
@@ -13342,7 +13323,7 @@ IL_0019:
 
 IL_006d:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:117>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:113>
 		String_t* L_13 = G_B5_0;
 		il2cpp_codegen_runtime_class_init_inline(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var);
 		String_t* L_14 = ((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___SCENE_FOREST;
@@ -13368,7 +13349,7 @@ IL_006d:
 		G_B7_0 = G_B6_0;
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:117>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:113>
 		List_1_tCB5B3B0C70F6DFB6B059BB2C65DC77B101849444* L_18 = V_0;
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_19 = __this->___forestButton;
 		NullCheck(L_18);
@@ -13378,7 +13359,7 @@ IL_006d:
 
 IL_0094:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:118>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:114>
 		il2cpp_codegen_runtime_class_init_inline(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var);
 		String_t* L_20 = ((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___SCENE_OFFICE;
 		bool L_21;
@@ -13399,7 +13380,7 @@ IL_0094:
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:118>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:114>
 		List_1_tCB5B3B0C70F6DFB6B059BB2C65DC77B101849444* L_24 = V_0;
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_25 = __this->___officeButton;
 		NullCheck(L_24);
@@ -13408,7 +13389,7 @@ IL_0094:
 
 IL_00ba:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:119>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:115>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_26 = __this->___cancelButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_27;
@@ -13419,7 +13400,7 @@ IL_00ba:
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:119>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:115>
 		List_1_tCB5B3B0C70F6DFB6B059BB2C65DC77B101849444* L_28 = V_0;
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_29 = __this->___cancelButton;
 		NullCheck(L_28);
@@ -13428,16 +13409,16 @@ IL_00ba:
 
 IL_00d4:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:120>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:116>
 		List_1_tCB5B3B0C70F6DFB6B059BB2C65DC77B101849444* L_30 = V_0;
 		NullCheck(L_30);
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_31;
 		L_31 = List_1_ToArray_mA5249763CC5D6A0B85B1463BF70B178383FF1813(L_30, List_1_ToArray_mA5249763CC5D6A0B85B1463BF70B178383FF1813_RuntimeMethod_var);
 		__this->____navButtons = L_31;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____navButtons), (void*)L_31);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:122>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:118>
 		__this->____selectedIndex = 0;
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:123>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:119>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_32 = __this->____navButtons;
 		NullCheck(L_32);
 		if (!(((RuntimeArray*)L_32)->max_length))
@@ -13446,13 +13427,13 @@ IL_00d4:
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:123>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:119>
 		TeleportMenuController_SetSelection_mF80D7E689826E26E8393FB87C941C8523222A48C(__this, 0, NULL);
 	}
 
 IL_00f7:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:126>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:122>
 		CharacterMovement_t9D8626C3C95447C5CD13E831D32857E23BD590FA* L_33 = __this->____characterMovement;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_34;
@@ -13463,7 +13444,7 @@ IL_00f7:
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:126>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:122>
 		CharacterMovement_t9D8626C3C95447C5CD13E831D32857E23BD590FA* L_35 = __this->____characterMovement;
 		NullCheck(L_35);
 		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_35, (bool)0, NULL);
@@ -13471,7 +13452,7 @@ IL_00f7:
 
 IL_0111:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:127>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:123>
 		return;
 	}
 }
@@ -13486,11 +13467,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_GoToBeach_m24AF15
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:129>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:125>
 		il2cpp_codegen_runtime_class_init_inline(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var);
 		String_t* L_0 = ((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___SCENE_BEACH;
 		TeleportMenuController_ConfirmDestination_mCA121ED96FA2B4AC1DD90340D827B44E0409A048(__this, L_0, _stringLiteral942EACC8B7E30762F336FC7577592B072245E62D, NULL);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:129>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:125>
 		return;
 	}
 }
@@ -13505,11 +13486,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_GoToForest_mEC8FD
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:130>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:126>
 		il2cpp_codegen_runtime_class_init_inline(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var);
 		String_t* L_0 = ((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___SCENE_FOREST;
 		TeleportMenuController_ConfirmDestination_mCA121ED96FA2B4AC1DD90340D827B44E0409A048(__this, L_0, _stringLiteralBC161E02E08A002D3A5028CD393D64CC02DB37E7, NULL);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:130>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:126>
 		return;
 	}
 }
@@ -13524,11 +13505,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_GoToOffice_mB65B6
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:131>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:127>
 		il2cpp_codegen_runtime_class_init_inline(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var);
 		String_t* L_0 = ((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___SCENE_OFFICE;
 		TeleportMenuController_ConfirmDestination_mCA121ED96FA2B4AC1DD90340D827B44E0409A048(__this, L_0, _stringLiteral2A086A6F9FCD8DE49A02013F063B6AD96DF491C9, NULL);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:131>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:127>
 		return;
 	}
 }
@@ -13544,13 +13525,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_CloseMenu_m16C3D3
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:135>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:131>
 		il2cpp_codegen_runtime_class_init_inline(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var);
 		((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___ChosenScene = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 		Il2CppCodeGenWriteBarrier((void**)(&((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___ChosenScene), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:136>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:132>
 		__this->____isOpen = (bool)0;
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:137>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:133>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___menuCanvas;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -13561,7 +13542,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_CloseMenu_m16C3D3
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:137>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:133>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___menuCanvas;
 		NullCheck(L_2);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)0, NULL);
@@ -13569,12 +13550,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_CloseMenu_m16C3D3
 
 IL_002b:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:138>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:134>
 		TeleportMenuController_SetButtonsVisible_m1D03B874578A19F55643BADBE3240718B3EC0320(__this, (bool)1, NULL);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:139>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:135>
 		__this->____guiMessage = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____guiMessage), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:140>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:136>
 		CharacterMovement_t9D8626C3C95447C5CD13E831D32857E23BD590FA* L_3 = __this->____characterMovement;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_4;
@@ -13585,7 +13566,7 @@ IL_002b:
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:140>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:136>
 		CharacterMovement_t9D8626C3C95447C5CD13E831D32857E23BD590FA* L_5 = __this->____characterMovement;
 		NullCheck(L_5);
 		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_5, (bool)1, NULL);
@@ -13593,9 +13574,9 @@ IL_002b:
 
 IL_0057:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:141>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:137>
 		TeleportMenuController_ResetAllButtonColors_m0120DD8E00DAC084E8A1D3839B160E6D10A22DBA(__this, NULL);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:142>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:138>
 		return;
 	}
 }
@@ -13610,7 +13591,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_TeleportNow_mB0D7
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:146>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:142>
 		il2cpp_codegen_runtime_class_init_inline(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var);
 		String_t* L_0 = ((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___ChosenScene;
 		bool L_1;
@@ -13621,7 +13602,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_TeleportNow_mB0D7
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:147>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:143>
 		il2cpp_codegen_runtime_class_init_inline(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var);
 		String_t* L_2 = ((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___ChosenScene;
 		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
@@ -13630,7 +13611,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_TeleportNow_mB0D7
 
 IL_0016:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:148>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:144>
 		return;
 	}
 }
@@ -13641,20 +13622,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_ConfirmDestinatio
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral15196F05B117690F3E12E56AA0C43803EA0D2A46);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA5407DDB8018C2B67AF65BD6FF0E7DAE78AE9B98);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3F8AC95C3780E1A4D4A4208F1ADA68D8D5630128);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralFFEF3DBE279EE1F92E1E2E46F45BC18EBBF55A1A);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:152>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:148>
 		String_t* L_0 = ___0_sceneName;
 		il2cpp_codegen_runtime_class_init_inline(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var);
 		((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___ChosenScene = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___ChosenScene), (void*)L_0);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:153>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:149>
 		__this->____isOpen = (bool)0;
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:155>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:151>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___menuCanvas;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -13665,7 +13647,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_ConfirmDestinatio
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:155>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:151>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___menuCanvas;
 		NullCheck(L_3);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_3, (bool)0, NULL);
@@ -13673,55 +13655,40 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_ConfirmDestinatio
 
 IL_0027:
 	{
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:153>
+		String_t* L_4 = ___1_displayName;
+		String_t* L_5;
+		L_5 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral3F8AC95C3780E1A4D4A4208F1ADA68D8D5630128, L_4, _stringLiteralFFEF3DBE279EE1F92E1E2E46F45BC18EBBF55A1A, NULL);
+		__this->____guiMessage = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____guiMessage), (void*)L_5);
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:154>
+		float L_6;
+		L_6 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
+		__this->____guiHideTime = ((float)il2cpp_codegen_add(L_6, (1.5f)));
 		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:156>
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___teleportObject;
+		CharacterMovement_t9D8626C3C95447C5CD13E831D32857E23BD590FA* L_7 = __this->____characterMovement;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_5;
-		L_5 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_4, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_5)
+		bool L_8;
+		L_8 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_7, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_8)
 		{
-			goto IL_0041;
+			goto IL_0068;
 		}
 	}
 	{
 		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:156>
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = __this->___teleportObject;
-		NullCheck(L_6);
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_6, (bool)1, NULL);
+		CharacterMovement_t9D8626C3C95447C5CD13E831D32857E23BD590FA* L_9 = __this->____characterMovement;
+		NullCheck(L_9);
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_9, (bool)1, NULL);
 	}
 
-IL_0041:
+IL_0068:
 	{
 		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:158>
-		String_t* L_7 = ___1_displayName;
-		String_t* L_8;
-		L_8 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralA5407DDB8018C2B67AF65BD6FF0E7DAE78AE9B98, L_7, _stringLiteral15196F05B117690F3E12E56AA0C43803EA0D2A46, NULL);
-		__this->____guiMessage = L_8;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->____guiMessage), (void*)L_8);
+		String_t* L_10 = ___0_sceneName;
+		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
+		SceneManager_LoadScene_mBB3DBC1601A21F8F4E8A5D68FED30EA9412F218E(L_10, NULL);
 		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:159>
-		float L_9;
-		L_9 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
-		__this->____guiHideTime = ((float)il2cpp_codegen_add(L_9, (3.0f)));
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:161>
-		CharacterMovement_t9D8626C3C95447C5CD13E831D32857E23BD590FA* L_10 = __this->____characterMovement;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_11;
-		L_11 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_10, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_11)
-		{
-			goto IL_0082;
-		}
-	}
-	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:161>
-		CharacterMovement_t9D8626C3C95447C5CD13E831D32857E23BD590FA* L_12 = __this->____characterMovement;
-		NullCheck(L_12);
-		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_12, (bool)1, NULL);
-	}
-
-IL_0082:
-	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:162>
 		return;
 	}
 }
@@ -13736,7 +13703,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_ConfirmSelection_
 	}
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* V_0 = NULL;
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:166>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:163>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_0 = __this->____navButtons;
 		if (!L_0)
 		{
@@ -13754,20 +13721,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_ConfirmSelection_
 
 IL_0011:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:166>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:163>
 		return;
 	}
 
 IL_0012:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:167>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:164>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_2 = __this->____navButtons;
 		int32_t L_3 = __this->____selectedIndex;
 		NullCheck(L_2);
 		int32_t L_4 = L_3;
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_5 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
 		V_0 = L_5;
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:168>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:165>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_6 = V_0;
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_7 = __this->___beachButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -13779,14 +13746,14 @@ IL_0012:
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:168>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:165>
 		TeleportMenuController_GoToBeach_m24AF15D4E829E0E8526701C1FB792DC44487CD93(__this, NULL);
 		return;
 	}
 
 IL_0035:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:169>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:166>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_9 = V_0;
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_10 = __this->___forestButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -13798,14 +13765,14 @@ IL_0035:
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:169>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:166>
 		TeleportMenuController_GoToForest_mEC8FDBADCFBA78F7EE6D3C5F610B07F84686E86C(__this, NULL);
 		return;
 	}
 
 IL_004a:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:170>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:167>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_12 = V_0;
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_13 = __this->___officeButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -13817,14 +13784,14 @@ IL_004a:
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:170>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:167>
 		TeleportMenuController_GoToOffice_mB65B6D97DBA73693A464937CFC45C8C77C270E35(__this, NULL);
 		return;
 	}
 
 IL_005f:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:171>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:168>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_15 = V_0;
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_16 = __this->___cancelButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -13836,13 +13803,13 @@ IL_005f:
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:171>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:168>
 		TeleportMenuController_CloseMenu_m16C3D396BCDF7556BDF1E59C7487735707CD16EF(__this, NULL);
 	}
 
 IL_0073:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:172>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:169>
 		return;
 	}
 }
@@ -13856,7 +13823,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_SetButtonsVisible
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:176>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:173>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = __this->___beachButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -13867,7 +13834,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_SetButtonsVisible
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:176>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:173>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_2 = __this->___beachButton;
 		NullCheck(L_2);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3;
@@ -13879,7 +13846,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_SetButtonsVisible
 
 IL_001f:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:177>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:174>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_5 = __this->___forestButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_6;
@@ -13890,7 +13857,7 @@ IL_001f:
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:177>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:174>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_7 = __this->___forestButton;
 		NullCheck(L_7);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8;
@@ -13902,7 +13869,7 @@ IL_001f:
 
 IL_003e:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:178>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:175>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_10 = __this->___officeButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_11;
@@ -13913,7 +13880,7 @@ IL_003e:
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:178>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:175>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_12 = __this->___officeButton;
 		NullCheck(L_12);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_13;
@@ -13925,7 +13892,7 @@ IL_003e:
 
 IL_005d:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:179>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:176>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_15 = __this->___cancelButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_16;
@@ -13936,7 +13903,7 @@ IL_005d:
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:179>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:176>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_17 = __this->___cancelButton;
 		NullCheck(L_17);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_18;
@@ -13948,7 +13915,7 @@ IL_005d:
 
 IL_007c:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:180>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:177>
 		return;
 	}
 }
@@ -13962,7 +13929,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_SetSelection_mF80
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:184>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:181>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_0 = __this->____navButtons;
 		if (!L_0)
 		{
@@ -13979,7 +13946,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_SetSelection_mF80
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:185>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:182>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_3 = __this->____navButtons;
 		int32_t L_4 = __this->____selectedIndex;
 		NullCheck(L_3);
@@ -13992,10 +13959,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_SetSelection_mF80
 
 IL_0030:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:186>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:183>
 		int32_t L_8 = ___0_index;
 		__this->____selectedIndex = L_8;
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:187>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:184>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_9 = __this->____navButtons;
 		if (!L_9)
 		{
@@ -14012,7 +13979,7 @@ IL_0030:
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:188>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:185>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_12 = __this->____navButtons;
 		int32_t L_13 = __this->____selectedIndex;
 		NullCheck(L_12);
@@ -14025,7 +13992,7 @@ IL_0030:
 
 IL_0067:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:189>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:186>
 		return;
 	}
 }
@@ -14040,7 +14007,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_MarkCurrentScene_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:193>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:190>
 		String_t* L_0 = ___0_current;
 		il2cpp_codegen_runtime_class_init_inline(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var);
 		String_t* L_1 = ((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___SCENE_BEACH;
@@ -14062,7 +14029,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_MarkCurrentScene_
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:193>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:190>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_5 = __this->___beachButton;
 		il2cpp_codegen_runtime_class_init_inline(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_6 = ((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___COLOR_CURRENT;
@@ -14071,7 +14038,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_MarkCurrentScene_
 
 IL_002c:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:194>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:191>
 		String_t* L_7 = ___0_current;
 		il2cpp_codegen_runtime_class_init_inline(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var);
 		String_t* L_8 = ((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___SCENE_FOREST;
@@ -14093,7 +14060,7 @@ IL_002c:
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:194>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:191>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_12 = __this->___forestButton;
 		il2cpp_codegen_runtime_class_init_inline(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_13 = ((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___COLOR_CURRENT;
@@ -14102,7 +14069,7 @@ IL_002c:
 
 IL_0058:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:195>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:192>
 		String_t* L_14 = ___0_current;
 		il2cpp_codegen_runtime_class_init_inline(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var);
 		String_t* L_15 = ((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___SCENE_OFFICE;
@@ -14124,7 +14091,7 @@ IL_0058:
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:195>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:192>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_19 = __this->___officeButton;
 		il2cpp_codegen_runtime_class_init_inline(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_20 = ((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___COLOR_CURRENT;
@@ -14133,7 +14100,7 @@ IL_0058:
 
 IL_0084:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:196>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:193>
 		return;
 	}
 }
@@ -14175,7 +14142,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_ResetAllButtonCol
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* G_B9_1 = NULL;
 	TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97* G_B9_2 = NULL;
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:200>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:197>
 		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
 		Scene_tA1DC762B79745EB5140F054C884855B922318356 L_0;
 		L_0 = SceneManager_GetActiveScene_m0B320EC4302F51A71495D1CCD1A0FF9C2ED1FDC8(NULL);
@@ -14183,7 +14150,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_ResetAllButtonCol
 		String_t* L_1;
 		L_1 = Scene_get_name_m3C818DFA663E159274DAD823B780C7616C5E2A8C((&V_1), NULL);
 		V_0 = L_1;
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:201>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:198>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_2 = __this->___beachButton;
 		String_t* L_3 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var);
@@ -14221,7 +14188,7 @@ IL_002e:
 	{
 		NullCheck(G_B3_2);
 		TeleportMenuController_SetButtonColor_m7B1D899C4F320F2D527B22BD6FC3E46B12BC8416(G_B3_2, G_B3_1, G_B3_0, NULL);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:202>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:199>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_8 = __this->___forestButton;
 		String_t* L_9 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var);
@@ -14259,7 +14226,7 @@ IL_0053:
 	{
 		NullCheck(G_B6_2);
 		TeleportMenuController_SetButtonColor_m7B1D899C4F320F2D527B22BD6FC3E46B12BC8416(G_B6_2, G_B6_1, G_B6_0, NULL);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:203>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:200>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_14 = __this->___officeButton;
 		String_t* L_15 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var);
@@ -14297,12 +14264,12 @@ IL_0078:
 	{
 		NullCheck(G_B9_2);
 		TeleportMenuController_SetButtonColor_m7B1D899C4F320F2D527B22BD6FC3E46B12BC8416(G_B9_2, G_B9_1, G_B9_0, NULL);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:204>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:201>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_20 = __this->___cancelButton;
 		il2cpp_codegen_runtime_class_init_inline(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_21 = ((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___COLOR_NORMAL;
 		TeleportMenuController_SetButtonColor_m7B1D899C4F320F2D527B22BD6FC3E46B12BC8416(__this, L_20, L_21, NULL);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:205>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:202>
 		return;
 	}
 }
@@ -14318,7 +14285,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_SetButtonColor_m7
 	}
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* V_0 = NULL;
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:209>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:206>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = ___0_btn;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -14329,19 +14296,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController_SetButtonColor_m7
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:209>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:206>
 		return;
 	}
 
 IL_000a:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:210>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:207>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_2 = ___0_btn;
 		NullCheck(L_2);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_3;
 		L_3 = Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79(L_2, Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79_RuntimeMethod_var);
 		V_0 = L_3;
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:211>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:208>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_4 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
@@ -14352,7 +14319,7 @@ IL_000a:
 		}
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:211>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:208>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_6 = V_0;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_7 = ___1_color;
 		NullCheck(L_6);
@@ -14361,7 +14328,7 @@ IL_000a:
 
 IL_0021:
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:212>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:209>
 		return;
 	}
 }
@@ -14375,7 +14342,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController__ctor_m5B0A0D627A
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:40>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:37>
 		__this->____guiMessage = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____guiMessage), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
@@ -14399,25 +14366,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeleportMenuController__cctor_m79C606C15
 		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:7>
 		((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___ChosenScene = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 		Il2CppCodeGenWriteBarrier((void**)(&((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___ChosenScene), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:27>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:24>
 		((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___SCENE_BEACH = _stringLiteral59659219EFA05389602188A2CCCE78088ABF77DE;
 		Il2CppCodeGenWriteBarrier((void**)(&((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___SCENE_BEACH), (void*)_stringLiteral59659219EFA05389602188A2CCCE78088ABF77DE);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:28>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:25>
 		((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___SCENE_FOREST = _stringLiteralFA3FA393F0236A6E0197D4832DD5F97F608DF718;
 		Il2CppCodeGenWriteBarrier((void**)(&((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___SCENE_FOREST), (void*)_stringLiteralFA3FA393F0236A6E0197D4832DD5F97F608DF718);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:29>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:26>
 		((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___SCENE_OFFICE = _stringLiteralE0B548C7E5CE61F595209A0BA571278D592F2356;
 		Il2CppCodeGenWriteBarrier((void**)(&((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___SCENE_OFFICE), (void*)_stringLiteralE0B548C7E5CE61F595209A0BA571278D592F2356);
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:31>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:28>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
 		memset((&L_0), 0, sizeof(L_0));
 		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_0), (0.800000012f), (0.100000001f), (0.100000001f), (1.0f), NULL);
 		((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___COLOR_CURRENT = L_0;
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:32>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:29>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
 		L_1 = Color_get_yellow_m66637FA14383E8D74F24AE256B577CE1D55D469F_inline(NULL);
 		((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___COLOR_SELECTED = L_1;
-		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:33>
+		//<source_info:C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Assets/Scripts/TeleportMenuController.cs:30>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_2;
 		L_2 = Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline(NULL);
 		((TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_StaticFields*)il2cpp_codegen_static_fields_for(TeleportMenuController_tBF9291F6AA14C3AE6D017DE522D631C630243D97_il2cpp_TypeInfo_var))->___COLOR_NORMAL = L_2;

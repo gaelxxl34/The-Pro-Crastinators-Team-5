@@ -27,6 +27,15 @@ public class TwoLineDisplay : MonoBehaviour
         inputField.ActivateInputField();
     }
 
+    private void Update()
+    {
+        // Always keep the input field focused regardless of mouse clicks
+        if (!inputField.isFocused)
+        {
+            inputField.ActivateInputField();
+        }
+    }
+
     private void OnDestroy()
     {
         if (inputField != null)

@@ -6,27 +6,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 
-/// <summary>
-/// Simple OpenAI-powered chatbot.
-/// Two text fields: one shows the current question, one shows the current answer.
-/// Submitting a new question (Enter) replaces both — no history is shown on screen.
-///
-/// Setup:
-///   1. Get an API key from https://platform.openai.com/api-keys
-///   2. Create the file  Assets/StreamingAssets/openai_key.txt
-///      and paste ONLY the key inside (no quotes, no spaces).
-///      (Or set the OPENAI_API_KEY environment variable.)
-///   3. Attach this script to any GameObject and wire up:
-///        - inputField    : TMP_InputField the user types into
-///        - questionField : TMP_Text that shows the submitted question
-///        - answerField   : TMP_Text that shows the assistant's answer
-///
-/// Tip: set the InputField's Line Type to "Single Line" or "Multi Line Submit"
-/// so pressing Enter triggers submission.
-///
-/// IMPORTANT: never commit your API key. Add to .gitignore:
-///   Assets/StreamingAssets/openai_key.txt
-/// </summary>
 public class Chatbot : MonoBehaviour
 {
     [Header("UI")]
@@ -62,6 +41,15 @@ public class Chatbot : MonoBehaviour
     private void Awake()
     {
         _apiKey = LoadApiKey();
+    }
+
+    private void Update()
+    {
+        // Always keep the input field focused regardless of mouse clicks
+        if (!inputField.isFocused)
+        {
+            inputField.ActivateInputField();
+        }
     }
 
     private void Start()
