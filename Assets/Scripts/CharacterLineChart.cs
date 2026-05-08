@@ -28,13 +28,11 @@ public class CharacterLineChart : MonoBehaviour
         cachedCounts = counts;
         cachedIntervals = intervals;
 
-        // Default to top character by count
-        string topCharacter = GetTopCharacter();
-        if (topCharacter != null)
-            DisplayCharacter(topCharacter);
+        string top = GetTopCharacter();
+        if (top != null)
+            DisplayCharacter(top);
     }
 
-    // Call this from your viewport entry buttons
     public void DisplayCharacter(string characterName)
     {
         if (cachedIntervals == null || !cachedIntervals.ContainsKey(characterName))
@@ -44,20 +42,15 @@ public class CharacterLineChart : MonoBehaviour
         }
 
         selectedCharacter = characterName;
-        BuildChart(characterName);
+        RebuildChart();
     }
 
-    private void BuildChart(string characterName)
+    private void RebuildChart()
     {
-        if (chart == null)
-        {
-            Debug.LogError("[CharacterLineChart] LineChart not assigned.");
-            return;
-        }
+        if (chart == null || cachedIntervals == null) return;
 
         chart.RemoveData();
 
-        // X axis — 10% intervals
         chart.AddXAxisData("0-10%");
         chart.AddXAxisData("10-20%");
         chart.AddXAxisData("20-30%");
@@ -69,15 +62,17 @@ public class CharacterLineChart : MonoBehaviour
         chart.AddXAxisData("80-90%");
         chart.AddXAxisData("90-100%");
 
-        int[] intervalData = cachedIntervals[characterName];
+        if (string.IsNullOrEmpty(selectedCharacter)) return;
+        if (!cachedIntervals.ContainsKey(selectedCharacter)) return;
 
-        var serie = chart.AddSerie<Line>(characterName);
-        serie.serieName = characterName;
+        int[] intervalData = cachedIntervals[selectedCharacter];
+        var serie = chart.AddSerie<Line>(selectedCharacter);
+        serie.serieName = selectedCharacter;
 
         for (int j = 0; j < 10; j++)
             chart.AddData(serie.serieName, j < intervalData.Length ? intervalData[j] : 0);
 
-        Debug.Log($"[CharacterLineChart] Displaying chart for: {characterName}");
+        Debug.Log($"[CharacterLineChart] Displaying: {selectedCharacter}");
     }
 
     private string GetTopCharacter()

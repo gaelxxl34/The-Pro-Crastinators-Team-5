@@ -8,7 +8,6 @@ public class RaycastController : MonoBehaviour
     [Header("Core")]
     public Camera cam;
     public float raycastLength = 10f;
-    // public LineRenderer lineRenderer; // Commented out - using reticle instead of laser line
     public GameObject player;
 
     [Header("Settings Menu")]
@@ -34,6 +33,10 @@ public class RaycastController : MonoBehaviour
     private int carriedOriginalLayer;
     private bool carriedWasKinematic;
 
+    // Entry interaction
+    private EntryController currentHoveredEntry;
+    private EntryController currentSelectedEntry;
+
     void Start()
     {
         if (objectMenuCanvas != null) objectMenuCanvas.gameObject.SetActive(false);
@@ -43,7 +46,6 @@ public class RaycastController : MonoBehaviour
         if (storeButton != null) AddColliderToButton(storeButton);
         if (exitButton != null) AddColliderToButton(exitButton);
 
-        // Force-enable the reticle dot (it's inside VRGroup which may start inactive)
         if (cam != null)
         {
             XRCardboardReticle reticle = cam.GetComponentInChildren<XRCardboardReticle>(true);
@@ -69,13 +71,26 @@ public class RaycastController : MonoBehaviour
 
     void Update()
     {
-        // O key / gamepad Y (U) toggles settings menu (checked before raycastEnabled guard)
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            EntryController[] allEntries = FindObjectsOfType<EntryController>();
+            Debug.Log($"[Debug] Found {allEntries.Length} EntryControllers in scene");
+            foreach (var e in allEntries)
+            {
+                BoxCollider col = e.GetComponent<BoxCollider>();
+                if (col == null)
+                    Debug.Log($"[Debug] {e.CharacterName} — NO BoxCollider");
+                else
+                    Debug.Log($"[Debug] {e.CharacterName} — Collider size: {col.size} enabled: {col.enabled} isTrigger: {col.isTrigger}");
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.O) || Input.GetKeyDown(KeyCode.U))
         {
             if (settingsMenuController != null)
             {
                 if (settingsMenuController.IsGrabbing)
-                    return; // Can't open menu while carrying object
+                    return;
 
                 if (settingsMenuController.IsOpen)
                     settingsMenuController.CloseSettingsMenu();
@@ -87,7 +102,6 @@ public class RaycastController : MonoBehaviour
 
         if (!raycastEnabled)
         {
-            // Forward inventory/settings input when raycast is disabled
             if (settingsMenuController != null)
                 settingsMenuController.HandleInput();
             return;
@@ -126,23 +140,26 @@ public class RaycastController : MonoBehaviour
                 HandleCarry(endPoint);
             }
             else if (!menuOpen)
+            {
                 ClearHighlight();
+
+                // Clear entry hover when looking at nothing
+                if (currentHoveredEntry != null)
+                {
+                    currentHoveredEntry.OnHoverExit();
+                    currentHoveredEntry = null;
+                }
+            }
             else if (menuOpen)
                 ClearMenuHighlight();
         }
-
-        // Commented out - using reticle instead of laser line
-        // Vector3 lineStart = origin + cam.transform.up * -0.1f;
-        // lineRenderer.SetPosition(0, lineStart);
-        // lineRenderer.SetPosition(1, endPoint);
     }
 
-    // ===== PUBLIC METHODS FOR SETTINGS MENU =====
+    // ===== PUBLIC METHODS =====
 
     public void SetRaycastEnabled(bool enabled)
     {
         raycastEnabled = enabled;
-        // lineRenderer.enabled = enabled; // Commented out - using reticle instead of laser line
     }
 
     public void CloseAllMenus()
@@ -159,10 +176,8 @@ public class RaycastController : MonoBehaviour
         carriedObject = obj;
         carriedOriginalLayer = obj.layer;
         ClearHighlight();
-        // Move to Ignore Raycast layer so ray doesn't hit it, but colliders still work
         SetLayerRecursive(obj, LayerMask.NameToLayer("Ignore Raycast"));
 
-        // Make kinematic so gravity doesn't pull the object down while carrying
         Rigidbody rb = obj.GetComponent<Rigidbody>();
         if (rb != null)
         {
@@ -173,9 +188,10 @@ public class RaycastController : MonoBehaviour
 
     public bool IsCarrying() { return carriedObject != null; }
 
+    // ===== CARRY =====
+
     void HandleCarry(Vector3 rayEnd)
     {
-        // Position object 3m in front of camera, slightly above ground
         Vector3 forward = cam.transform.forward;
         forward.y = 0f;
         forward.Normalize();
@@ -190,13 +206,9 @@ public class RaycastController : MonoBehaviour
             carriedObject = null;
             inventory.Remove(released);
 
-            // Restore layer
             SetLayerRecursive(released, carriedOriginalLayer);
-
-            // Release at current carry position (no height adjustment)
             released.transform.position = pos;
 
-            // Restore original kinematic state and zero out velocity
             Rigidbody rb = released.GetComponent<Rigidbody>();
             if (rb != null)
             {
@@ -205,7 +217,6 @@ public class RaycastController : MonoBehaviour
                 rb.angularVelocity = Vector3.zero;
             }
 
-            // Make sure object is visible
             released.SetActive(true);
             Debug.Log("Released object at: " + pos);
         }
@@ -223,19 +234,35 @@ public class RaycastController : MonoBehaviour
     void HandleActions(RaycastHit hit)
     {
 
+        //Debug.Log($"[RaycastController] Hit: {hit.collider.gameObject.name}");
+
+        // Check for scroll view entry first
+        EntryController entry = hit.collider.GetComponent<EntryController>();
+        if (entry == null) entry = hit.collider.GetComponentInParent<EntryController>();
+
+        if (entry != null)
+        {
+            HandleEntryInteraction(hit, entry);
+            return;
+        }
+
+        // Clear entry hover when looking at something else
+        if (currentHoveredEntry != null)
+        {
+            currentHoveredEntry.OnHoverExit();
+            currentHoveredEntry = null;
+        }
+
         if (Input.GetKeyDown(KeyCode.JoystickButton0))
         {
-            // Check for chatbot trigger first (assistant's table)
             ChatbotTrigger chatbot = hit.collider.GetComponent<ChatbotTrigger>();
             if (chatbot == null)
                 chatbot = hit.collider.GetComponentInParent<ChatbotTrigger>();
 
-            // Check for lever activation
             LeverController lever = hit.collider.GetComponent<LeverController>();
             if (lever == null)
                 lever = hit.collider.GetComponentInParent<LeverController>();
 
-            // Check for mannequin display toggle
             GraphUserInterface mannequin = hit.collider.GetComponent<GraphUserInterface>();
             if (mannequin == null)
                 mannequin = hit.collider.GetComponentInParent<GraphUserInterface>();
@@ -256,6 +283,27 @@ public class RaycastController : MonoBehaviour
             {
                 OpenObjectMenu(hit.collider.gameObject);
             }
+        }
+    }
+
+    // ===== ENTRY INTERACTION =====
+
+    void HandleEntryInteraction(RaycastHit hit, EntryController entry)
+    {
+        // Handle hover
+        if (entry != currentHoveredEntry)
+        {
+            currentHoveredEntry?.OnHoverExit();
+            currentHoveredEntry = entry;
+            currentHoveredEntry?.OnHover();
+        }
+
+        // Handle select
+        if (Input.GetKeyDown(KeyCode.JoystickButton0))
+        {
+            currentSelectedEntry?.Deselect();
+            currentSelectedEntry = entry;
+            entry.OnSelect();
         }
     }
 
@@ -297,14 +345,10 @@ public class RaycastController : MonoBehaviour
         if (hitButton == null)
             hitButton = hitObj.GetComponentInParent<Button>();
 
-        if (hitButton == destroyButton)
-            SetMenuHighlight("Destroy");
-        else if (hitButton == storeButton)
-            SetMenuHighlight("Store");
-        else if (hitButton == exitButton)
-            SetMenuHighlight("Exit");
-        else
-            ClearMenuHighlight();
+        if (hitButton == destroyButton) SetMenuHighlight("Destroy");
+        else if (hitButton == storeButton) SetMenuHighlight("Store");
+        else if (hitButton == exitButton) SetMenuHighlight("Exit");
+        else ClearMenuHighlight();
 
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.H) || Input.GetKeyDown(KeyCode.L))
         {
@@ -346,8 +390,7 @@ public class RaycastController : MonoBehaviour
     void SetButtonColor(Button btn, Color color)
     {
         Image img = btn.GetComponent<Image>();
-        if (img != null)
-            img.color = color;
+        if (img != null) img.color = color;
     }
 
     void ClearMenuHighlight()

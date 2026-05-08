@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using Unity.InferenceEngine;
@@ -13,13 +14,17 @@ public class NERProcessor : MonoBehaviour
     [Header("Input")]
     [SerializeField] private string documentFileName = "";
 
+
     private Model runtimeModel;
     private Worker worker;
     private BERTTokenizer tokenizer = new();
 
     public Dictionary<string, int> CharacterCounts { get; private set; } = new();
     public Dictionary<string, int[]> CharacterCountsByInterval { get; private set; } = new();
+
     public event System.Action<Dictionary<string, int>, Dictionary<string, int[]>> OnProcessingComplete;
+
+    public bool IsProcessing { get; private set; } = false;
 
     private void Start()
     {
@@ -33,15 +38,14 @@ public class NERProcessor : MonoBehaviour
         }
 
         tokenizer.Load(vocabPath);
-
         runtimeModel = ModelLoader.Load(modelPath);
         worker = new Worker(runtimeModel, BackendType.CPU);
         Debug.Log("[NERProcessor] Model loaded and ready.");
 
+        OnProcessingComplete += (counts, intervals) => transform.parent.gameObject.SetActive(false);
+
         if (!string.IsNullOrEmpty(documentFileName))
             ProcessDocument(documentFileName);
-
-
     }
 
     public void ProcessDocument(string fileName)
@@ -60,7 +64,6 @@ public class NERProcessor : MonoBehaviour
 
         string text = File.ReadAllText(documentPath);
         Debug.Log($"[NERProcessor] Loaded document: {fileName} ({text.Length} characters)");
-
         ProcessText(text);
     }
 
@@ -68,24 +71,31 @@ public class NERProcessor : MonoBehaviour
     {
         if (worker == null)
         {
-            Debug.LogError("[NERProcessor] Worker not initialized. Is the model loaded?");
+            Debug.LogError("[NERProcessor] Worker not initialized.");
             return;
         }
 
-        CharacterCounts = ExtractAndCountCharacters(text);
-        PopulateContent();
-        OnProcessingComplete?.Invoke(CharacterCounts, CharacterCountsByInterval);
+        if (IsProcessing)
+        {
+            Debug.LogWarning("[NERProcessor] Already processing, request ignored.");
+            return;
+        }
+
+        StartCoroutine(ProcessCoroutine(text));
     }
 
-    private Dictionary<string, int> ExtractAndCountCharacters(string text)
+    private IEnumerator ProcessCoroutine(string text)
     {
+        IsProcessing = true;
+
         var counts = new Dictionary<string, int>();
         CharacterCountsByInterval = new Dictionary<string, int[]>();
 
         if (!tokenizer.IsLoaded)
         {
             Debug.LogError("[NERProcessor] Tokenizer not loaded.");
-            return counts;
+            IsProcessing = false;
+            yield break;
         }
 
         List<int[]> chunks = tokenizer.TokenizeChunked(text);
@@ -96,8 +106,6 @@ public class NERProcessor : MonoBehaviour
         {
             int[] inputIds = chunks[chunkIndex];
             int length = inputIds.Length;
-
-            // Which 10% interval does this chunk belong to?
             int interval = Mathf.Min((int)((float)chunkIndex / totalChunks * 10), 9);
 
             int[] attentionMask = new int[length];
@@ -127,7 +135,6 @@ public class NERProcessor : MonoBehaviour
 
                 if (isSubword && !string.IsNullOrEmpty(currentName))
                 {
-                    // Always append subwords directly, stripped of ##
                     currentName += cleanToken;
                 }
                 else if (label == "B-PER")
@@ -137,11 +144,11 @@ public class NERProcessor : MonoBehaviour
                         Increment(counts, currentName);
                         IncrementInterval(CharacterCountsByInterval, currentName, interval);
                     }
-                    currentName = cleanToken; // Use cleanToken not rawToken
+                    currentName = cleanToken;
                 }
                 else if (label == "I-PER" && !string.IsNullOrEmpty(currentName))
                 {
-                    currentName += " " + cleanToken; // Use cleanToken not rawToken
+                    currentName += " " + cleanToken;
                 }
                 else
                 {
@@ -154,39 +161,54 @@ public class NERProcessor : MonoBehaviour
                 }
             }
 
-            // Catch any name still in progress at end of chunk
             if (!string.IsNullOrEmpty(currentName))
             {
                 Increment(counts, currentName);
                 IncrementInterval(CharacterCountsByInterval, currentName, interval);
             }
+
+            // Yield every chunk so the main thread stays responsive
+            yield return null;
         }
 
+        CharacterCounts = counts;
+
         Debug.Log($"[NERProcessor] Found {counts.Count} unique characters across all chunks.");
-        return counts;
+
+        PopulateContent();
+        IsProcessing = false;
+        OnProcessingComplete?.Invoke(CharacterCounts, CharacterCountsByInterval);
     }
 
     private void PopulateContent()
     {
         if (entryPrefab == null || content == null)
         {
-            Debug.LogError("[NERProcessor] entryPrefab or content is not assigned in the Inspector.");
+            Debug.LogError("[NERProcessor] entryPrefab or content is not assigned.");
             return;
         }
 
         foreach (Transform child in content)
             Destroy(child.gameObject);
 
-        foreach (var kvp in CharacterCounts)
+        var sorted = new List<KeyValuePair<string, int>>(CharacterCounts);
+        sorted.Sort((a, b) => b.Value.CompareTo(a.Value));
+
+        var chart = FindObjectOfType<CharacterLineChart>();
+
+        foreach (var kvp in sorted)
         {
             GameObject entry = Instantiate(entryPrefab, content);
             entry.name = kvp.Key;
 
-            var label = entry.GetComponentInChildren<TextMeshProUGUI>();
-            if (label != null)
-                label.text = $"{kvp.Key}: {kvp.Value}";
+            var entryController = entry.GetComponent<EntryController>();
+            if (entryController != null)
+                entryController.Setup(kvp.Key, kvp.Value, chart);
             else
-                Debug.LogWarning("[NERProcessor] entryPrefab is missing a TextMeshProUGUI component.");
+            {
+                var label = entry.GetComponentInChildren<TextMeshProUGUI>();
+                if (label != null) label.text = $"{kvp.Key}: {kvp.Value}";
+            }
         }
 
         Debug.Log($"[NERProcessor] Populated {CharacterCounts.Count} characters into content.");
