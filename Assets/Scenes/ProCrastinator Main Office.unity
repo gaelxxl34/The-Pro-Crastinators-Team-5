@@ -3076,7 +3076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77257f3788d9d124eb1251bcc34d1a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GazeClicker
-  triggerKey: 333
+  triggerKey: 330
   maxDistance: 20
 --- !u!1001 &2298441178538104740
 PrefabInstance:
