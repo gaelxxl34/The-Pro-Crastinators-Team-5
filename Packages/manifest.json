@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "com.google.xr.cardboard": "file:C:/Users/YSkip/Documents/School Work/Virtual Reality/Packages/cardboard-xr-plugin-master",
-    "com.monitor1394.xcharts": "file:C:/Users/YSkip/Documents/School Work/Virtual Reality/Packages/XCharts-master",
+    "com.google.xr.cardboard": "https://github.com/googlevr/cardboard-xr-plugin.git",
+    "com.monitor1394.xcharts": "file:XCharts-master",
     "com.unity.2d.animation": "13.0.2",
     "com.unity.2d.pixel-perfect": "5.1.1",
     "com.unity.2d.psdimporter": "12.0.1",

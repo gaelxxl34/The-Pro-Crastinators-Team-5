@@ -1,19 +1,20 @@
 {
   "dependencies": {
     "com.google.xr.cardboard": {
-      "version": "file:C:/Users/YSkip/Documents/School Work/Virtual Reality/Packages/cardboard-xr-plugin-master",
+      "version": "https://github.com/googlevr/cardboard-xr-plugin.git",
       "depth": 0,
-      "source": "local",
+      "source": "git",
       "dependencies": {
         "com.unity.inputsystem": "1.7.0",
         "com.unity.xr.management": "3.2.9",
         "com.unity.xr.legacyinputhelpers": "2.1.4"
-      }
+      },
+      "hash": "0e9fc4f4695ace50fd64996b05ecc5404d0c0ac6"
     },
     "com.monitor1394.xcharts": {
-      "version": "file:C:/Users/YSkip/Documents/School Work/Virtual Reality/Packages/XCharts-master",
+      "version": "file:XCharts-master",
       "depth": 0,
-      "source": "local",
+      "source": "embedded",
       "dependencies": {}
     },
     "com.unity.2d.animation": {
