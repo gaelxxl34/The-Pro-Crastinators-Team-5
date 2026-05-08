@@ -21,9 +21,6 @@ public class TeleportMenuController : MonoBehaviour
     public Button officeButton;
     public Button cancelButton;
 
-    [Header("Teleport Zone")]
-    public GameObject teleportObject;
-
     private static readonly string SCENE_BEACH  = "ProCrastinator Beach";
     private static readonly string SCENE_FOREST = "ProCrastinator Forest";
     private static readonly string SCENE_OFFICE = "ProCrastinator Main Office";
@@ -47,7 +44,6 @@ public class TeleportMenuController : MonoBehaviour
     void Start()
     {
         if (menuCanvas != null) menuCanvas.SetActive(false);
-        if (teleportObject != null) teleportObject.SetActive(false);
         if (player != null)
         {
             _characterMovement = player.GetComponent<CharacterMovement>();
@@ -153,12 +149,13 @@ public class TeleportMenuController : MonoBehaviour
         _isOpen = false;
 
         if (menuCanvas != null) menuCanvas.SetActive(false);
-        if (teleportObject != null) teleportObject.SetActive(true);
 
-        _guiMessage = "Head to the teleportation zone\nto travel to the " + displayName + "!";
-        _guiHideTime = Time.time + 3f;
+        _guiMessage = "Teleporting to the " + displayName + "...";
+        _guiHideTime = Time.time + 1.5f;
 
         if (_characterMovement != null) _characterMovement.enabled = true;
+
+        SceneManager.LoadScene(sceneName);
     }
 
     private void ConfirmSelection()
