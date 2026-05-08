@@ -1,12 +1,14 @@
 # ninja log v5
-35	449	7997435808177090	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	667b34ccae8374ae
-450	604	7997435809628593	C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2u2q3423/obj/arm64-v8a/libswappywrapper.so	b9410a92265d1210
-18	1389	7997435817497655	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	36cd735acd6599dc
-22	1399	7997435817527788	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	81bd5069066df381
-10	1400	7997435817643289	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	ec19444bf68d101c
-26	1412	7997435817708602	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	5525ddc4d10238aa
-1	1479	7997435818435504	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	30eaf63c73a6c3d9
-14	1607	7997435819704839	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	96441e2bb77663b4
-6	1677	7997435820373086	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	e06eaa2b6188a7d3
-31	1783	7997435821444830	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	7e9398c5d2ea9239
-1783	1876	7997435822407208	C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2u2q3423/obj/arm64-v8a/libgame.so	e9ddfdf1cdf3fd58
+65	408	7997494602153611	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	667b34ccae8374ae
+5	1359	7997494611624344	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	e06eaa2b6188a7d3
+408	584	7997494603734795	C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2u2q3423/obj/arm64-v8a/libswappywrapper.so	b9410a92265d1210
+40	1026	7997494608337120	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	36cd735acd6599dc
+12	1033	7997494608392765	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	81bd5069066df381
+22	1054	7997494608613222	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	ec19444bf68d101c
+28	1110	7997494609166445	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	30eaf63c73a6c3d9
+33	1065	7997494608701595	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	5525ddc4d10238aa
+51	1270	7997494610762296	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	96441e2bb77663b4
+59	1162	7997494609686947	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	7e9398c5d2ea9239
+1360	1437	7997494612445807	C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2u2q3423/obj/arm64-v8a/libgame.so	e9ddfdf1cdf3fd58
+1	787	7997509480117184	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	667b34ccae8374ae
+787	1019	7997509482290556	C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2u2q3423/obj/arm64-v8a/libswappywrapper.so	b9410a92265d1210

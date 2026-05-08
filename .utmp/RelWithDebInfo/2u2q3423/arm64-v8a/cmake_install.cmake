@@ -44,7 +44,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/.utmp/RelWithDebInfo/2u2q3423/arm64-v8a/GameActivity/cmake_install.cmake")
   include("C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/.utmp/RelWithDebInfo/2u2q3423/arm64-v8a/FramePacing/cmake_install.cmake")
 
 endif()

@@ -1,0 +1,23 @@
+# ninja log v5
+152	284	7997476997749720	C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2u2q3423/obj/armeabi-v7a/libswappywrapper.so	adae06b040d1292a
+0	926	7997477004198350	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	b9c1ebbfca8e0866
+43	151	7997476996526602	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	8370471688928a5a
+18	660	7997477001579494	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	575a1a345fc6fae0
+31	799	7997477002980121	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	2d41fd666fb54795
+5	669	7997477001664895	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	3d9d4564371b68be
+26	681	7997477001786489	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	2d3eee4c3a524ec2
+8	719	7997477002175032	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	f5382b5c96aa736
+35	716	7997477002139547	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	bb41c6ecaa531dec
+12	859	7997477003560495	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	9807bf2d45c93459
+926	1008	7997477005065608	C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2u2q3423/obj/armeabi-v7a/libgame.so	eae789ad0a16c49a
+51	133	7997479069505386	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	8370471688928a5a
+134	228	7997479070347027	C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2u2q3423/obj/armeabi-v7a/libswappywrapper.so	adae06b040d1292a
+8	630	7997479074435459	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	575a1a345fc6fae0
+23	640	7997479074536143	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	2d3eee4c3a524ec2
+12	649	7997479074616660	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	3d9d4564371b68be
+27	661	7997479074737196	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	bb41c6ecaa531dec
+18	698	7997479075113482	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	f5382b5c96aa736
+46	763	7997479075769422	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	2d41fd666fb54795
+31	855	7997479076669429	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	9807bf2d45c93459
+4	896	7997479077052806	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	b9c1ebbfca8e0866
+897	969	7997479077831575	C:/Users/YSkip/Documents/GitHub/The-Pro-Crastinators-Team-5/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2u2q3423/obj/armeabi-v7a/libgame.so	eae789ad0a16c49a

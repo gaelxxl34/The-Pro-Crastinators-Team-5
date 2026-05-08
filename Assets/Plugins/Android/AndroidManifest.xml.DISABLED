@@ -23,5 +23,12 @@
             <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
             <meta-data android:name="android.app.lib_name" android:value="game" />
         </activity>
+		<activity
+            android:name="com.google.cardboard.sdk.QrCodeCaptureActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:stateNotNeeded="true"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" />
     </application>
 </manifest>

@@ -22,11 +22,11 @@ static Il2CppMethodPointer s_methodPointers[5] =
 };
 static const int32_t s_InvokerIndices[5] = 
 {
-	22269,
-	12683,
-	12683,
-	12316,
-	12683,
+	23043,
+	13066,
+	13066,
+	12697,
+	13066,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_2D_Animation_Samples_Dependency_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_2D_Animation_Samples_Dependency_CodeGenModule = 
