@@ -2,11 +2,10 @@ using UnityEngine;
 
 public class HighlightObject : MonoBehaviour
 {
-    private Outline outline;
+    public Outline outline;
 
     void Awake()
     {
-        outline = GetComponent<Outline>();
         if (outline == null)
             outline = gameObject.AddComponent<Outline>();
 

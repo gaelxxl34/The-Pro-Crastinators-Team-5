@@ -73,24 +73,14 @@ public class TeleportMenuController : MonoBehaviour
         float y = (Screen.height - h) / 2f;
         GUI.Label(new Rect(x, y, w, h), _guiMessage, style);
     }
-
     void Update()
     {
         if (!_isOpen || _navButtons == null || _navButtons.Length == 0) return;
 
-        // Joystick left-stick / D-pad vertical — navigate up
-        float vert = Input.GetAxisRaw("Vertical");
-        bool axisUp = false;
-        if (vert > 0.5f)  { if (!_dpadUpHeld)   { axisUp   = true; _dpadUpHeld   = true; } }
-        else              { _dpadUpHeld   = false; }
-
-        bool axisDown = false;
-        if (vert < -0.5f) { if (!_dpadDownHeld) { axisDown = true; _dpadDownHeld = true; } }
-        else              { _dpadDownHeld = false; }
-
-        if (Input.GetKeyDown(KeyCode.UpArrow) || axisUp)
+        // Replace axis navigation with direct joystick buttons
+        if (Input.GetKeyDown(KeyCode.UpArrow))
             SetSelection((_selectedIndex - 1 + _navButtons.Length) % _navButtons.Length);
-        else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S) || axisDown)
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
             SetSelection((_selectedIndex + 1) % _navButtons.Length);
         else if (Input.GetKeyDown(KeyCode.JoystickButton0))
             ConfirmSelection();

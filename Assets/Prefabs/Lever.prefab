@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e69875572d46479b951e058a67a1ffb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LeverController
-  teleportObject: {fileID: 0}
+  teleportMenu: {fileID: 0}
 --- !u!1 &8874881464562091457 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -516098083770646512, guid: c47d4a29f0d014aad90958fe5141d16b, type: 3}
@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb54b7de68760404082a22e370a3ee6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HighlightObject
+  outline: {fileID: 1607190671040641394}
 --- !u!64 &569999401245608841
 MeshCollider:
   m_ObjectHideFlags: 0

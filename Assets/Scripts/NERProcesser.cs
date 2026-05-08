@@ -40,6 +40,8 @@ public class NERProcessor : MonoBehaviour
 
         if (!string.IsNullOrEmpty(documentFileName))
             ProcessDocument(documentFileName);
+
+
     }
 
     public void ProcessDocument(string fileName)
